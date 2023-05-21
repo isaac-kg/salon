@@ -23,7 +23,10 @@ const About = props => {
         </div>
       </div>
       <div className="about__images">
-        .fafdas
+         <div className="about__images-one">
+          <img src="../../cosmetics.jpg" alt=""/>
+         </div>
+         <div className="about__images-two">.</div>
       </div>
     </div>
   )

@@ -1,8 +1,7 @@
 
 .about{
-    display: flex;
-    align-items: center;
     min-height: 50vh;
+    padding: 10px;
 }
 
 .about__info{
@@ -36,4 +35,21 @@
     font-weight: 400;
     font-size: 3.2em;
 }
+
+
+
+@media only screen and (min-width: 768px){
+    .about{
+        display: flex;
+        padding: 20px;
+    }
+
+
+}
+
+@media only screen and (min-width: 992px){
+
+}
+
+
 
