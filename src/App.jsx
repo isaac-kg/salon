@@ -2,6 +2,7 @@ import Header from './components/header'
 import About from './components/about'
 import Product from './components/product'
 import Contact from './components/contact'
+import Offer from './components/offers'
 
 function App() {
 
@@ -13,6 +14,7 @@ function App() {
       <Header />
       <About />
       <Product />
+      <Offer/>
       <Contact />
     </div>
   )
