@@ -24,9 +24,11 @@ const About = props => {
       </div>
       <div className="about__images">
          <div className="about__images-one">
-          <img src="../../cosmetics.jpg" alt=""/>
+          <img className="image-one" src="src/assets/makeuplady.jpg" alt=""/>
          </div>
-         <div className="about__images-two">.</div>
+         <div className="about__images-two">
+          <img className="image-two" src="src/assets/cosmetics.jpg" alt=""/>
+         </div>
       </div>
     </div>
   )
