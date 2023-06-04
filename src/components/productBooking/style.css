@@ -1,0 +1,35 @@
+.product{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.product__image{
+    flex-basis: 30%;
+    max-width: 100%;
+    
+}
+
+.product__image-1{
+    width: 100%;
+    object-fit: cover;
+    height: 300px;
+}
+
+.product__description{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 70%;
+    text-align: center;
+    gap: 40px;
+}
+
+.product__description__btn{
+    border: none;
+    background-color: blue;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: white;
+    width: 200px;
+    margin: auto;
+}

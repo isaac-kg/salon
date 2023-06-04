@@ -3,6 +3,7 @@ import About from './components/about'
 import Product from './components/product'
 import Contact from './components/contact'
 import Offer from './components/offers'
+import ProductBooking from './components/productBooking'
 
 function App() {
 
@@ -14,7 +15,13 @@ function App() {
       <Header />
       <About />
       <Product />
-      <Offer/>
+      <Offer
+        title={"Nails"}
+        price={60}
+        description={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime sint iste minus."}
+        image={"src/assets/nails.jpg"}
+      />
+      <ProductBooking />
       <Contact />
     </div>
   )

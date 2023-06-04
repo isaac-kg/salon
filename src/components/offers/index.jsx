@@ -1,21 +1,25 @@
 
+import './style.css';
 
-const Offer  = () => {
+const Offer  = ({title, price, description, image}) => {
   return (
     <div className="offer">
       <div className="offer__images">
-        
+        <img className="offer__image_1" src={image}/>
       </div>
+      <div>
       <div className="offer__catergory">
         <div className="offer__name">
-          Lorem, ipsum dolor.
+          {title}.
         </div>
         <div className="offer__price">
-          $12.00
+          {"R "}{price}
         </div>
       </div>
       <div className="offer__description">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro corporis aspernatur veniam.
+        {description}
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime sint iste minus.
+      </div>
       </div>
     </div>
   )
