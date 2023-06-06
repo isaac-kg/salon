@@ -16,7 +16,7 @@ const ProductBooking = props => {
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo quos perferendis, ab quidem beatae corporis recusandae, itaque impedit velit odit soluta nulla.
         </div>
         <button className="product__description__btn">
-          Show Now 
+          Show Now
         </button>
       </div>
     </div>
