@@ -1,6 +1,6 @@
 import React from "react";
 import "./about.css"
-const About = props => {
+const About = () => {
   return (
     <div className="about">
       <div className="about__info">
@@ -22,6 +22,7 @@ const About = props => {
           </div>
         </div>
       </div>
+      
       <div className="about__images">
          <div className="about__images-one">
           <img className="image-one" src="src/assets/makeuplady.jpg" alt=""/>
