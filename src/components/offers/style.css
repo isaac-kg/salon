@@ -2,6 +2,7 @@
   display: flex;
   gap: 20px;
   align-items: center;
+  width: 100%;
 }
 
 .offer__catergory {
@@ -19,4 +20,17 @@
 .offer__name {
   font-weight: 700;
   font-size: 26px;
+}
+
+@media only screen and (min-width: 768px){
+  .offer__container{
+    display: flex;
+    gap: 20px;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+
+  .offer{
+    flex-basis: 50%;
+  }
 }
