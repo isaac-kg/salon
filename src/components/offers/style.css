@@ -26,11 +26,11 @@
   .offer__container{
     display: flex;
     gap: 20px;
-    flex-wrap: nowrap;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: space-around;
   }
 
   .offer{
-    flex-basis: 50%;
+    flex-basis: 45%;
   }
 }
