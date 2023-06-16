@@ -1,0 +1,45 @@
+
+.contact{
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  align-items: center;
+  gap: 20px;
+}
+
+.contact__title{
+  font-size: 24px;
+}
+
+.contact__email > input{
+  border: none;
+  border-bottom: 2px solid black;
+  padding: 8px 10px;
+  font-size: 14px;
+  width: 340px;
+}
+
+input:active, input:focus{
+  outline: none;
+}
+
+.contact__button {
+  border: none;
+  background-color: blue;
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: white;
+  width: fit-content;
+}
+
+@media only screen and (min-width: 768px){
+  .contact{
+    flex-direction: row;
+    gap: 0px;
+  }
+
+  .contact__email{
+    margin-left: 40px;
+  }
+}
+  
