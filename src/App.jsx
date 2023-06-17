@@ -4,6 +4,7 @@ import Service from './components/service'
 import Contact from './components/contact'
 import Offer from './components/offers'
 import ProductBooking from './components/productBooking'
+import Testimonial from './components/testimonial'
 
 function App() {
 
@@ -26,6 +27,7 @@ function App() {
         image={"src/assets/nails.jpg"}
       />
       <ProductBooking />
+      <Testimonial />
       <Contact />
     </div>
   )
