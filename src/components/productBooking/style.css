@@ -1,7 +1,11 @@
+.product{
+  margin: 80px auto;
+}
 .product__image {
-  flex-basis: 30%;
+  flex-basis: 40%;
   max-width: 100%;
 }
+
 
 .product__image-1 {
   width: 100%;
@@ -12,10 +16,19 @@
 .product__description {
   display: flex;
   flex-direction: column;
-  flex-basis: 70%;
+  flex-basis: 60%;
   text-align: center;
   gap: 40px;
 }
+
+.product__image-two{
+  order: 2;
+}
+
+.product__description-two{
+  order: 1;
+}
+
 
 .product__description__btn {
   border: none;
@@ -29,6 +42,7 @@
 
 @media only screen and (min-width: 768px){
   .product {
+    margin: 20px auto;
     display: flex;
     align-items: center;
     gap: 20px;

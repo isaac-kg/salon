@@ -1,6 +1,6 @@
 import Header from './components/header'
 import About from './components/about'
-import Product from './components/product'
+import Service from './components/service'
 import Contact from './components/contact'
 import Offer from './components/offers'
 import ProductBooking from './components/productBooking'
@@ -14,7 +14,11 @@ function App() {
        */}
       <Header />
       <About />
-      <Product />
+      <Service 
+        image={"src/assets/nails.jpg"}
+        serviceName='We will see'
+        description={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime sint iste minus."}
+      />
       <Offer
         title={"Nails"}
         price={60}

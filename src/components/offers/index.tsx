@@ -41,7 +41,7 @@ const Offer = ({title, price, description, image}: OfferProps ) => {
             {title}.
           </div>
           <div className="offer__price">
-            {"R "}{price}
+            {"-----------R "}{price}
           </div>
         </div>
         <div className="offer__description">
