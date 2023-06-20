@@ -1,6 +1,6 @@
 import "./style.css"
 
-const ProductBooking = () => {
+const ShopNow = () => {
   return (
     <div>
 
@@ -41,4 +41,4 @@ const ProductBooking = () => {
   )
 }
 
-export default ProductBooking;
+export default ShopNow;

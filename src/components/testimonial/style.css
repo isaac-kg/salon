@@ -1,0 +1,32 @@
+.testimonial {
+  max-width: 500px;
+  margin: auto;
+  text-align: center;
+}
+
+.testimonial__header {
+  font-size: 28px;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+.testimonial__line {
+  margin: 20px auto;
+}
+
+.testimonial__image {
+  max-width: 400px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.testimonial__username {
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 100;
+}
+
+.testimonial__title{
+  font-weight: 600;
+}
+
