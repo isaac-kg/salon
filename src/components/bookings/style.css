@@ -1,0 +1,31 @@
+.booking{
+    display: flex;
+    align-items: center;
+}
+
+.booking__image{
+    flex: 1;
+    width: 50%;
+    height: 450px;
+    object-fit: cover;
+}
+
+.booking__card{
+    flex: 1;
+    text-align: center;
+    margin-left: -80px;
+    margin-right: 40px;
+    padding: 20px 40px;
+    background-color: antiquewhite;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px
+    
+}
+
+.booking__button{
+    width: fit-content;
+    margin: 0px auto;
+}
