@@ -18,6 +18,7 @@ function App() {
        <ShopNow />
       <Booking />
       <Testimonial />
+      <Contact />
     </div>
   )
 }
