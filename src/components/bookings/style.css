@@ -1,49 +1,43 @@
+.booking__card {
+  flex: 1;
+  text-align: center;
+  padding: 20px 40px;
+  background-color: antiquewhite;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
 
-.booking__card{
-    flex: 1;
-    text-align: center;
-    padding: 20px 40px;
-    background-color: antiquewhite;
-    height: 300px;
+.booking__button {
+  width: fit-content;
+  margin: 0px auto;
+}
+
+.booking__image {
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .booking {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 20px
-}
+    align-items: center;
+  }
 
-.booking__button{
-    width: fit-content;
-    margin: 0px auto;
-}
+  .booking__image {
+    display: block;
+    flex: 1;
+    width: 50%;
+    height: 450px;
+    object-fit: cover;
+  }
 
-.booking__image{
-    display: none;
-}
-
-@media only screen and (min-width: 768px){
-    .booking{
-        display: flex;
-        align-items: center;
-    }
-
-    .booking__image{
-        display: block;
-        flex: 1;
-        width: 50%;
-        height: 450px;
-        object-fit: cover;
-    }
-    
-    
-
-.booking__card{
+  .booking__card {
     margin-left: -80px;
     margin-right: 40px;
     padding: 20px 40px;
     height: 300px;
-    gap: 20px
-}
-
-    
-
+    gap: 20px;
+  }
 }
