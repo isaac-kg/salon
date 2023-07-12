@@ -5,7 +5,7 @@ const About = () => {
     <div className="about">
       <div className="about__info">
         <div className="about__info-header">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus eum reprehenderit quia?
+         Actions content has to go here Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus eum reprehenderit quia?
         </div>
         <div className="about__info-text">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, quaerat! Suscipit voluptatum,
