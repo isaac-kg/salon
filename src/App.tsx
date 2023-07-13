@@ -6,6 +6,7 @@ import Offer from './components/offers'
 import ShopNow from './components/shopNow'
 import Testimonial from './components/testimonial'
 import Booking from './components/bookings'
+import Footer from './components/footer'
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
       <Booking />
       <Testimonial />
       <Contact />
+      <Footer />
     </div>
   )
 }
