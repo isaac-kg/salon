@@ -7,7 +7,7 @@ const Contact = () => {
     <div className="contact__email">
       <input type="text" placeholder="your email..."/>
     </div>
-    <div className="contact__button">Subscribe</div>
+    <button className="contact__button">Subscribe</button>
   </div>
 }
 

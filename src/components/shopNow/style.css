@@ -30,12 +30,6 @@
 }
 
 .product__description__btn {
-  border: none;
-  background-color: blue;
-  padding: 10px 20px;
-  border-radius: 10px;
-  color: white;
-  width: 200px;
   margin: auto;
 }
 

@@ -13,7 +13,7 @@ function App() {
   return (
     <div className="App">
       {/* 
-     http://preview.themeforest.net/item/atura-nail-salon-wordpress-theme/full_screen_preview/35352438?_ga=2.85836569.1048488018.1682965854-301774857.1682965854
+    //  http://preview.themeforest.net/item/atura-nail-salon-wordpress-theme/full_screen_preview/35352438?_ga=2.85836569.1048488018.1682965854-301774857.1682965854
        */}
 
        {/* 
@@ -27,6 +27,17 @@ function App() {
        <About />
        <ShopNow />
       <Booking />
+      <Offer 
+        title={"This is title"}
+        price={300}
+        description={"I must make sure every thing is connected and is responsive "}
+        image={"imagewill got her"}
+      />
+      <Service 
+        image=".fdsfs"
+        serviceName="Service name"
+        description={"I must make sure every thing is connected and is responsive "}
+      />
       <Testimonial />
       <Contact />
       <Footer />
