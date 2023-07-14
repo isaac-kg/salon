@@ -19,6 +19,7 @@
   flex-basis: 60%;
   text-align: center;
   gap: 40px;
+  padding: var(--padding-sm);
 }
 
 .product__image-two{
@@ -40,4 +41,6 @@
     align-items: center;
     gap: 20px;
   }
+
+  .product__description { padding: var(--padding-lg);}
 }
