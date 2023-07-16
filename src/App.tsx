@@ -24,6 +24,7 @@ function App() {
           I have  to host the site.
           I have to start implementing the logic.
        */}
+       <Header />
        <About />
        <ShopNow />
       <Booking />
