@@ -7,6 +7,7 @@ import ShopNow from './components/shopNow'
 import Testimonial from './components/testimonial'
 import Booking from './components/bookings'
 import Footer from './components/footer'
+import Hero from './components/hero'
 
 function App() {
 
@@ -25,6 +26,7 @@ function App() {
           I have to start implementing the logic.
        */}
        <Header />
+       <Hero />
        <About />
        <ShopNow />
       <Booking />
