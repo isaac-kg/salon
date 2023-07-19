@@ -28,19 +28,23 @@ function App() {
        <Header />
        <Hero />
        <About />
+
+      <h3 style={{textAlign: "center"}}>Some Of Our Services</h3>
+      <Service 
+        image=".fdsfs"
+        serviceName="Service name"
+        description={"I must make sure every thing is connected and is responsive "}
+      />
        <ShopNow />
-      <Booking />
+       <h3 style={{textAlign: "center"}}>Popular Offers</h3>
+
       <Offer 
         title={"This is title"}
         price={300}
         description={"I must make sure every thing is connected and is responsive "}
         image={"imagewill got her"}
       />
-      <Service 
-        image=".fdsfs"
-        serviceName="Service name"
-        description={"I must make sure every thing is connected and is responsive "}
-      />
+      <Booking />
       <Testimonial />
       <Contact />
       <Footer />
