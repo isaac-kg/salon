@@ -3,8 +3,8 @@
 :root{
     --primary-color: #000;
     --secondary-color: ;
-    --padding-sm: 10px;
-    --padding-lg: 20px;
+    --padding-sm: 20px 10px;
+    --padding-lg: 40px 20px;
 }
 body{
     font-family: 'Sansita', sans-serif;    

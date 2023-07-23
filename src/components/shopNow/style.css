@@ -1,3 +1,6 @@
+.product-container{
+  padding: var(--padding-sm);
+}
 .product{
   margin: 80px auto;
 }
@@ -35,6 +38,10 @@
 }
 
 @media only screen and (min-width: 768px){
+  .product-container{
+    padding: var(--padding-lg);
+  }
+
   .product {
     margin: 20px auto;
     display: flex;

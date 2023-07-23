@@ -6,7 +6,7 @@
   align-items: center;
   gap: 20px;
   background-color: rgb(250, 231, 234);
-  padding: 20px;
+  padding: var(--padding-sm);
   justify-content: center;
 }
 
@@ -35,6 +35,7 @@ input:active, input:focus{
   .contact{
     flex-direction: row;
     gap: 0px;
+    padding: var(--padding-lg);
   }
 
   .contact__email{

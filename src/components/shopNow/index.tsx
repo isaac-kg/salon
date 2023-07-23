@@ -2,8 +2,7 @@ import "./style.css"
 
 const ShopNow = () => {
   return (
-    <div>
-
+    <div className="product-container">
       <div className="product">
         <div className="product__image">
           <img className="product__image-1" src="src/assets/nails.jpg" alt="" />
