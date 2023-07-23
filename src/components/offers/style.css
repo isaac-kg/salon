@@ -5,6 +5,10 @@
   width: 100%;
 }
 
+.offer__container {
+  padding: var(--padding-sm);
+}
+
 .offer__catergory {
   display: flex;
   justify-content: space-between;
@@ -24,8 +28,8 @@
   font-size: 26px;
 }
 
-@media only screen and (min-width: 768px){
-  .offer__container{
+@media only screen and (min-width: 768px) {
+  .offer__container {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
@@ -33,7 +37,7 @@
     padding: var(--padding-lg);
   }
 
-  .offer{
+  .offer {
     flex-basis: 45%;
   }
 }

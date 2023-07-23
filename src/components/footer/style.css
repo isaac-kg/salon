@@ -1,22 +1,22 @@
-.footer{
-	background-color: black;
-	color: white;
-	display: flex;
-	gap: 10px;
-	flex-direction: column;
-	align-items: center;
-	padding: 40px 0px;
+.footer {
+  background-color: black;
+  color: white;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 0px;
 }
 
-.footer__description{
-	max-width: 540px;
-	text-align: center;
+.footer__description {
+  max-width: 540px;
+  text-align: center;
 }
 
-.footer__copyright{
-	padding-top: 40px;
-	margin-top: 40px;
-	border-top: 1px solid #fff;
-	width: 100%;
-	text-align: center;
+.footer__copyright {
+  padding-top: 40px;
+  margin-top: 40px;
+  border-top: 1px solid #fff;
+  width: 100%;
+  text-align: center;
 }

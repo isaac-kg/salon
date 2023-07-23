@@ -27,18 +27,16 @@
   font-weight: 100;
 }
 
-.testimonial__title{
+.testimonial__title {
   font-weight: 600;
 }
 
-.testimonial__footer > button:nth-child(2){
+.testimonial__footer > button:nth-child(2) {
   margin-left: 10px;
 }
 
-
-@media only screen and (min-width: 768px){
+@media only screen and (min-width: 768px) {
   .testimonial {
     padding: var(--padding-lg);
   }
 }
-
