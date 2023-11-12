@@ -2,6 +2,7 @@
 .about{
   min-height: 50vh;
   padding: 10px;
+  background-color:  rgb(250, 231, 234);
 }
 
 .about__info{

@@ -8,7 +8,6 @@ import Testimonial from './components/testimonial'
 import Booking from './components/bookings'
 import Footer from './components/footer'
 import Hero from './components/hero'
-import BookingForm from './components/bookingForm'
 
 function App() {
 
@@ -29,11 +28,10 @@ function App() {
        <Header />
        <Hero />
        <About />
-       <BookingForm />
 
       <h3 style={{textAlign: "center"}}>Some Of Our Services</h3>
       <Service 
-        image=".fdsfs"
+        image="src/assets/icons/lips.svg"
         serviceName="Service name"
         description={"I must make sure every thing is connected and is responsive "}
       />

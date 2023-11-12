@@ -1,3 +1,7 @@
+.booking{
+  background-color: black;
+}
+
 .booking__card {
   flex: 1;
   text-align: center;

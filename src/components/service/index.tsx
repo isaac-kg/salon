@@ -10,12 +10,19 @@ interface ServiceProps {
 const Service = ({image, serviceName, description}: ServiceProps) => {
   
   const services = [1, 3, 52, 25, 2]
+  const images = [
+    "src/assets/icons/lips copy 2.svg", 
+    "src/assets/icons/lips copy 3.svg", 
+    "src/assets/icons/lips copy 4.svg", 
+    "src/assets/icons/lips copy.svg",
+    "src/assets/icons/lips.svg"
+  ]
   return (
     <div className="service-container">
       {
         services.map((n: number) => 
         <div className="service">
-        <img className="service__image" src={image} alt="" />
+        <img className="service__image" src={images[n]} alt="" />
         <p className="service__title">{serviceName}</p>
         <p className="service__info">
           {description}
