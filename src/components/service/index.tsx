@@ -11,7 +11,7 @@ const Service = ({image, serviceName, description}: ServiceProps) => {
   
   const services = [1, 3, 52, 25, 2]
   const images = [
-    "src/assets/icons/lips copy 2.svg", 
+    "src/assets/icons/perfume.svg", 
     "src/assets/icons/lips copy 3.svg", 
     "src/assets/icons/lips copy 4.svg", 
     "src/assets/icons/lips copy.svg",
@@ -20,14 +20,14 @@ const Service = ({image, serviceName, description}: ServiceProps) => {
   return (
     <div className="service-container">
       {
-        services.map((n: number) => 
+        images.map((image: string, n: number) => 
         <div className="service">
-        <img className="service__image" src={images[n]} alt="" />
-        <p className="service__title">{serviceName}</p>
-        <p className="service__info">
-          {description}
-        </p>
-      </div>
+          <img className="service__image" src={image} alt={image} />
+          <p className="service__title">{serviceName}</p>
+          <p className="service__info">
+            {description}
+          </p>
+        </div>
         )
       }
       

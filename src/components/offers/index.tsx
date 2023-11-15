@@ -13,7 +13,7 @@ const Offer = ({title, price, description, image}: OfferProps ) => {
     <div className="offer__container">
       <div className="offer">
         <div className="offer__images">
-          <img className="offer__image_1" src={image}/>
+          <img className="offer__image_1" src={"src/assets/service_eyeslashes.jpg"}/>
         </div>
         <div>
         <div className="offer__catergory">
@@ -33,7 +33,7 @@ const Offer = ({title, price, description, image}: OfferProps ) => {
 
       <div className="offer">
         <div className="offer__images">
-          <img className="offer__image_1" src={image}/>
+          <img className="offer__image_1" src={"src/assets/service_makeup.jpg"}/>
         </div>
         <div>
         <div className="offer__catergory">
@@ -53,7 +53,7 @@ const Offer = ({title, price, description, image}: OfferProps ) => {
 
       <div className="offer">
         <div className="offer__images">
-          <img className="offer__image_1" src={image}/>
+          <img className="offer__image_1" src={"src/assets/service_nails.jpg"}/>
         </div>
         <div>
         <div className="offer__catergory">
