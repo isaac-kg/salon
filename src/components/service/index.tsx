@@ -1,5 +1,5 @@
+import React from "react";
 import "./style.css"
-
 
 interface ServiceProps {
   image: string;
@@ -18,20 +18,23 @@ const Service = ({image, serviceName, description}: ServiceProps) => {
     "src/assets/icons/lips.svg"
   ]
   return (
-    <div className="service-container">
-      {
-        images.map((image: string, n: number) => 
-        <div className="service">
-          <img className="service__image" src={image} alt={image} />
-          <p className="service__title">{serviceName}</p>
-          <p className="service__info">
-            {description}
-          </p>
-        </div>
-        )
-      }
-      
-    </div>
+    <React.Fragment>
+      <h3 className="service-header">Some Of Our Services</h3>
+      <div className="service-container">
+        {
+          images.map((image: string, n: number) => 
+          <div className="service">
+            <img className="service__image" src={image} alt={image} />
+            <p className="service__title">{serviceName}</p>
+            <p className="service__info">
+              {description}
+            </p>
+          </div>
+          )
+        }
+        
+      </div>
+    </React.Fragment>
   )
 }
 

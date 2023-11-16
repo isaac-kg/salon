@@ -1,3 +1,11 @@
+.offer-header{
+  text-align: center;
+  font-size: 28px;
+  font-weight: 300;
+  margin-bottom: 10px;
+  margin-top: 60px;
+}
+
 .offer {
   display: flex;
   gap: 10px;
@@ -6,7 +14,7 @@
 }
 
 .offer__container {
-  padding: var(--padding-sm);
+  padding: var(--padding-sm-wide);
 }
 
 .offer__catergory {
@@ -34,7 +42,7 @@
     gap: 20px;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: var(--padding-lg);
+    padding: var(--padding-lg-wide);
   }
 
   .offer {

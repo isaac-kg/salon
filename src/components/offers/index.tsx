@@ -1,4 +1,5 @@
 
+import React from 'react';
 import './style.css';
 
 interface OfferProps {
@@ -10,67 +11,70 @@ interface OfferProps {
 
 const Offer = ({title, price, description, image}: OfferProps ) => {
   return (
-    <div className="offer__container">
-      <div className="offer">
-        <div className="offer__images">
-          <img className="offer__image_1" src={"src/assets/service_eyeslashes.jpg"}/>
-        </div>
-        <div>
-        <div className="offer__catergory">
-          <div className="offer__name">
-            {title}.
+    <React.Fragment>
+      <h3 className="offer-header">Popular Offers</h3>
+      <div className="offer__container">
+        <div className="offer">
+          <div className="offer__images">
+            <img className="offer__image_1" src={"src/assets/service_eyeslashes.jpg"}/>
           </div>
-          <div className="offer__price">
-            {"R "}{price}
+          <div>
+          <div className="offer__catergory">
+            <div className="offer__name">
+              {title}.
+            </div>
+            <div className="offer__price">
+              {"R "}{price}
+            </div>
+          </div>
+          <div className="offer__description">
+            {description}
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime sint iste minus.
+          </div>
           </div>
         </div>
-        <div className="offer__description">
-          {description}
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime sint iste minus.
-        </div>
-        </div>
-      </div>
 
-      <div className="offer">
-        <div className="offer__images">
-          <img className="offer__image_1" src={"src/assets/service_makeup.jpg"}/>
-        </div>
-        <div>
-        <div className="offer__catergory">
-          <div className="offer__name">
-            {title}.
+        <div className="offer">
+          <div className="offer__images">
+            <img className="offer__image_1" src={"src/assets/service_makeup.jpg"}/>
           </div>
-          <div className="offer__price">
-            {"-----------R "}{price}
+          <div>
+          <div className="offer__catergory">
+            <div className="offer__name">
+              {title}.
+            </div>
+            <div className="offer__price">
+              {"R "}{price}
+            </div>
+          </div>
+          <div className="offer__description">
+            {description}
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime sint iste minus.
+          </div>
           </div>
         </div>
-        <div className="offer__description">
-          {description}
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime sint iste minus.
-        </div>
-        </div>
-      </div>
 
-      <div className="offer">
-        <div className="offer__images">
-          <img className="offer__image_1" src={"src/assets/service_nails.jpg"}/>
-        </div>
-        <div>
-        <div className="offer__catergory">
-          <div className="offer__name">
-            {title}.
+        <div className="offer">
+          <div className="offer__images">
+            <img className="offer__image_1" src={"src/assets/service_nails.jpg"}/>
           </div>
-          <div className="offer__price">
-            {"R "}{price}
+          <div>
+          <div className="offer__catergory">
+            <div className="offer__name">
+              {title}.
+            </div>
+            <div className="offer__price">
+              {"R "}{price}
+            </div>
           </div>
-        </div>
-        <div className="offer__description">
-          {description}
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime sint iste minus.
-        </div>
+          <div className="offer__description">
+            {description}
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime sint iste minus.
+          </div>
+          </div>
         </div>
       </div>
-    </div>
+    </React.Fragment>
   )
 }
 

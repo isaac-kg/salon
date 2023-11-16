@@ -5,6 +5,8 @@
   --secondary-color: ;
   --padding-sm: 20px 10px;
   --padding-lg: 40px 20px;
+  --padding-sm-wide: 40px 10px;
+  --padding-lg-wide: 80px 20px;
 }
 body {
   font-family: "Sansita", sans-serif;
