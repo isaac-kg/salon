@@ -5,20 +5,21 @@ const About = () => {
     <div className="about">
       <div className="about__info">
         <div className="about__info-header">
-         Actions content has to go here Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus eum reprehenderit quia?
+        At Radiance Haven, we believe beauty is a journey—a fusion of self-care, expertise, and personalized attention.
         </div>
         <div className="about__info-text">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, quaerat! Suscipit voluptatum,
-           saepe eum sapiente dolore ut nesciunt rerum omnis repellat voluptatem?
+
+        Radiance Haven isn't just a salon—it's a gateway to an odyssey of beauty and self-discovery. Join us on this voyage where each treatment, each consultation, and every moment spent with us nurtures your innate beauty and brings forth the confident, radiant you.
+        While mirrors reflect our external beauty, Radiance Haven aims to evoke the glow that emanates from within. We believe that true radiance springs from a sense of well-being, confidence, and inner harmony.
         </div>
         <div className="about__info-service">
           <div className="about__service">
             <span className="about__service-header">242</span>
-            <span>Lorem, ipsum<br/> dolor.</span>
+            <span>Make up<br/> sold.</span>
           </div>
           <div className="about__service">
             <span className="about__service-header">182</span>
-            <span>Lorem,<br/> ipsum.</span>
+            <span>Lipsticks<br/> sold.</span>
           </div>
         </div>
       </div>
