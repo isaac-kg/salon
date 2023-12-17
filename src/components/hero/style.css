@@ -1,11 +1,16 @@
 .hero {
   min-height: 100vh;
   display: flex;
-  align-items: center;
+  
   justify-content: center;
   flex-direction: column;
   gap: 40px;
   padding: var(--padding-sm);
+  background-repeat: no-repeat;
+  background-image: url("../../assets/theone.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  color: #fff;
 }
 
 .hero__title {
@@ -13,9 +18,9 @@
 }
 
 .hero__subtitle {
-  font-weight: 600;
+  font-weight: 300;
   font-size: 2em;
-  text-align: center;
+ 
 }
 
 @media only screen and (min-width: 768px) {

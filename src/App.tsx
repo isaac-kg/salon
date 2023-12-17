@@ -16,6 +16,7 @@ function App() {
       {/* 
      http://preview.themeforest.net/item/atura-nail-salon-wordpress-theme/full_screen_preview/35352438?_ga=2.85836569.1048488018.1682965854-301774857.1682965854
        */}
+       <Header />
        <Hero />
        <About />
 
