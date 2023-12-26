@@ -6,7 +6,7 @@ const Header = (props: any) => {
     <div className="header__title">Radiance Haven</div>
     <div className="header__cal-action">
       <div>
-        <button className="header__button">Read More</button>
+        <img style={{width: "40px"}} src="src/assets/icons/cart.svg" alt="" />
       </div>
     </div>
   </div>
