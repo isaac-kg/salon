@@ -43,4 +43,10 @@
     padding: 40px 20px;
     justify-content: space-between;
   }
+
+  .service-para{
+    text-align: center;
+    width: 80%;
+    margin: auto;
+  }
 }

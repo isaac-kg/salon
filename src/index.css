@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Sansita&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
 :root {
   --primary-color: #000;
   --secondary-color: ;
@@ -7,20 +6,22 @@
   --padding-lg: 40px 20px;
   --padding-sm-wide: 40px 10px;
   --padding-lg-wide: 80px 20px;
+  -webkit-transform: translate3d(0,0,0);
 }
 body {
-  font-family: "Sansita", sans-serif;
+  font-family: 'PT Serif', serif;
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 
 button {
   border: none;
   background-color: black;
   padding: 12px 20px;
-  border-radius: 2px;
   color: white;
-  font-family: "Sansita", sans-serif;
-  font-size: 14px;
+  font-family: 'PT Serif', serif;
+  font-size: 18px;
   text-transform: capitalize;
+  cursor: pointer;
 }
