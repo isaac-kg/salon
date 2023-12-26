@@ -21,18 +21,17 @@ const Offer = ({title, price, description, image}: OfferProps ) => {
           <div>
           <div className="offer__catergory">
             <div className="offer__name">
-              {title}.
+              Eyelash
             </div>
             <div className="offer__price">
-              {"R "}{price}
+              {"R "}175.00
             </div>
           </div>
           <div className="offer__description">
-            {description}
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime sint iste minus.
+            Eyelash extensions tailored to enhance your unique beauty.
           </div>
           </div>
-        </div>
+         </div>
 
         <div className="offer">
           <div className="offer__images">
@@ -41,16 +40,15 @@ const Offer = ({title, price, description, image}: OfferProps ) => {
           <div>
           <div className="offer__catergory">
             <div className="offer__name">
-              {title}.
+              Makeup
             </div>
             <div className="offer__price">
-              {"R "}{price}
+              {"R "}260.00
             </div>
           </div>
           <div className="offer__description">
-            {description}
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime sint iste minus.
-          </div>
+          Enhance your appearance for any event, making your natural beauty stand out.
+         </div>
           </div>
         </div>
 
@@ -61,15 +59,14 @@ const Offer = ({title, price, description, image}: OfferProps ) => {
           <div>
           <div className="offer__catergory">
             <div className="offer__name">
-              {title}.
+              Manicure
             </div>
             <div className="offer__price">
-              {"R "}{price}
+              {"R "}200.00
             </div>
           </div>
           <div className="offer__description">
-            {description}
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime sint iste minus.
+          Cosmetic beauty treatment for the fingernails and hands.
           </div>
           </div>
         </div>

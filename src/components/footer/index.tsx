@@ -2,10 +2,9 @@ import "./style.css"
 const Footer = () => {
   return (
    <div className="footer">
-    <div className="footer__header">This is header</div>
+    <div className="footer__header">Radiance Haven</div>
     <p className="footer__description">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum aliquam aperiam, 
-      fuga architecto culpa eligendi dignissimos cupiditate, accusantium, impedit necessitatibus laudantium.
+    Join us on this voyage where each treatment, each consultation, and every moment spent with us nurtures your innate beauty and brings forth the confident, radiant you. 
     </p>
     <div className="footer__icons">
       <span>fb</span>
@@ -14,7 +13,7 @@ const Footer = () => {
       <span>YB</span>
     </div>
 		<div className="footer__copyright">
-      All right reserved 2020
+      All right reserved 2023
     </div>
 	 </div>
   )
