@@ -15,30 +15,30 @@ const Service = ({image, serviceName, description}: ServiceProps) => {
     {
     name: "Perfume",
     description: "Unraveling the nuances of scent layering for a personalized olfactory masterpiece.",
-    image: "src/assets/icons/lips copy 3.svg"
+    image: "../../assets/icons/lips copy 3.svg"
   },{
     name: "Eye lash",
     description: "Unveiling the secrets to luscious lashes that mesmerize with every blink.",
-    image: "src/assets/icons/lips copy 4.svg"
+    image: "../../assets/icons/lips copy 4.svg"
   },{
 
     name: "Makeup",
     description: "Guiding beauty enthusiasts step by step toward their personalized artistry",
-    image: "src/assets/icons/lips copy.svg"
+    image: "../../assets/icons/lips copy.svg"
   },{
     name: "Lipstick",
     description: "The colorful roadmap to achieving the perfect pout for any occasion.",
-    image: "src/assets/icons/lips.svg"
+    image: "../../assets/icons/lips.svg"
   }
 
   ]
   
   const images = [
-    "src/assets/icons/perfume.svg", 
-    "src/assets/icons/lips copy 3.svg", 
-    "src/assets/icons/lips copy 4.svg", 
-    "src/assets/icons/lips copy.svg",
-    "src/assets/icons/lips.svg"
+    "../../assets/icons/perfume.svg", 
+    "../../assets/icons/lips copy 3.svg", 
+    "../../assets/icons/lips copy 4.svg", 
+    "../../assets/icons/lips copy.svg",
+    "../../assets/icons/lips.svg"
   ]
   return (
     <React.Fragment>

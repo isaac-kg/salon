@@ -8,16 +8,16 @@ const Footer = () => {
     </p>
     <div className="footer__icons">
       <span>
-        <img style={{width: "20px"}} src="src/assets/icons/facebook.svg" alt="" />
+        <img style={{width: "20px"}} src="../../assets/icons/facebook.svg" alt="" />
       </span>
       <span>
-        <img style={{width: "20px"}} src="src/assets/icons/instagram.svg" alt="" />
+        <img style={{width: "20px"}} src="../../assets/icons/instagram.svg" alt="" />
       </span>
       <span>
-        <img style={{width: "20px"}} src="src/assets/icons/twitter.svg" alt="" />
+        <img style={{width: "20px"}} src="../../assets/icons/twitter.svg" alt="" />
       </span>
       <span>
-        <img style={{width: "20px"}} src="src/assets/icons/youtube.svg" alt="" />
+        <img style={{width: "20px"}} src="../../assets/icons/youtube.svg" alt="" />
       </span>
     </div>
 		<div className="footer__copyright">

@@ -22,7 +22,7 @@ function App() {
 
       
       <Service 
-        image="src/assets/icons/lips.svg"
+        image="../../assets/icons/lips.svg"
         serviceName="Service name"
         description={"I must make sure every thing is connected and is responsive "}
       />

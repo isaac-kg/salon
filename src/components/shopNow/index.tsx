@@ -5,7 +5,7 @@ const ShopNow = () => {
     <div className="product-container">
       <div className="product">
         <div className="product__image">
-          <img className="product__image-1" src="src/assets/makeup.jpg" alt="" />
+          <img className="product__image-1" src="../../assets/makeup.jpg" alt="" />
         </div>
         <div className="product__description">
           <div className="product__description__title">
@@ -22,7 +22,7 @@ const ShopNow = () => {
       
       <div className="product">
         <div className="product__image product__image-two">
-          <img className="product__image-1" src="src/assets/nails.jpg" alt="" />
+          <img className="product__image-1" src="../../assets/nails.jpg" alt="" />
         </div>
         <div className="product__description product__description-two">
           <div className="product__description__title">

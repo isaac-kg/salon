@@ -2,7 +2,7 @@ import "./style.css";
 
 const Booking = () => {
   return (<div className="booking">
-    <img src="src/assets/cosmetics.jpg" className="booking__image" />
+    <img src="../../assets/cosmetics.jpg" className="booking__image" />
 
     <div className="booking__card">
       <div className="booking__title">BOOK TIME TO GET MANICURE</div>
