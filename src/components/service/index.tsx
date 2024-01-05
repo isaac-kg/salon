@@ -50,7 +50,7 @@ const Service = ({image, serviceName, description}: ServiceProps) => {
       <div className="service-container">
         {
           tutorials.map((tutorial: any, n: number) => 
-          <div className="service">
+          <div className="service" key={n}>
             <img className="service__image" src={tutorial.image} />
             <p className="service__title">{tutorial.name}</p>
             <p className="service__info">
