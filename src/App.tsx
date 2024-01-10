@@ -8,19 +8,20 @@ import Testimonial from './components/testimonial'
 import Booking from './components/bookings'
 import Footer from './components/footer'
 import Hero from './components/hero'
+import Product from './components/product'
 
 function App() {
 
   return (
     <div className="App">
       {/* 
-     http://preview.themeforest.net/item/atura-nail-salon-wordpress-theme/full_screen_preview/35352438?_ga=2.85836569.1048488018.1682965854-301774857.1682965854
-       */}
-       <Header />
-       <Hero />
-       <About />
+        http://preview.themeforest.net/item/atura-nail-salon-wordpress-theme/full_screen_preview/35352438?_ga=2.85836569.1048488018.1682965854-301774857.1682965854
+      */}
+      <Header />
 
-      
+{/*       
+      <Hero />
+      <About />
       <Service 
         image="../../assets/icons/lips.svg"
         serviceName="Service name"
@@ -35,7 +36,10 @@ function App() {
       />
       <Booking />
       <Testimonial />
-      <Contact />
+      <Contact /> */}
+
+      <Product />
+
       <Footer />
     </div>
   )
