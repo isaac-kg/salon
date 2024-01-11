@@ -9,6 +9,7 @@ import Booking from './components/bookings'
 import Footer from './components/footer'
 import Hero from './components/hero'
 import Product from './components/product'
+import ListProduct from './components/listProduct'
 
 function App() {
 
@@ -38,7 +39,8 @@ function App() {
       <Testimonial />
       <Contact /> */}
 
-      <Product />
+      {/* <Product /> */}
+      <ListProduct />
 
       <Footer />
     </div>
