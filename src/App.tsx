@@ -1,18 +1,19 @@
-import Header from './components/header'
-import About from './components/about'
-import Service from './components/service'
-import Contact from './components/contact'
-import Offer from './components/offers'
-import ShopNow from './components/shopNow'
-import Testimonial from './components/testimonial'
-import Booking from './components/bookings'
-import Footer from './components/footer'
-import Hero from './components/hero'
-import Product from './components/product'
-import ListProduct from './components/listProduct'
+import Header from "./components/header"
+import About from "./components/about"
+import Service from "./components/service"
+import Contact from "./components/contact"
+import Offer from "./components/offers"
+import ShopNow from "./components/shopNow"
+import Testimonial from "./components/testimonial"
+import Booking from "./components/bookings"
+import Footer from "./components/footer"
+import Hero from "./components/hero"
+import Product from "./components/product"
+import ListProduct from "./components/listProduct"
+import * as ReactDOM from "react-dom/client"
+import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom"
 
 function App() {
-
   return (
     <div className="App">
       {/* 
@@ -20,7 +21,7 @@ function App() {
       */}
       <Header />
 
-{/*       
+      {/*       
       <Hero />
       <About />
       <Service 
@@ -40,7 +41,8 @@ function App() {
       <Contact /> */}
 
       {/* <Product /> */}
-      <ListProduct />
+      <Outlet />
+      {/* <ListProduct /> */}
 
       <Footer />
     </div>
