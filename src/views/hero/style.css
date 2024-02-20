@@ -21,12 +21,7 @@
  
 }
 
-.btn-secondary{
-  margin-left: 20px;
-  background-color: #fff;
-  border-color: white;
-  color: black
-}
+
 
 @media only screen and (min-width: 768px) {
   .hero {

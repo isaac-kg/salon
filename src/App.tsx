@@ -1,5 +1,5 @@
-import Header from "./components/header"
-import Footer from "./components/footer"
+import Header from "./views/header"
+import Footer from "./views/footer"
 import { Outlet } from "react-router-dom"
 
 function App() {

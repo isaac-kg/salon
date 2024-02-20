@@ -1,6 +1,7 @@
 import React from "react"
 import "./style.css"
 import { useNavigate } from "react-router-dom"
+import Button from "../../components/common/Button"
 
 const Hero = (props: any) => {
   const navigate = useNavigate()
@@ -16,10 +17,19 @@ const Hero = (props: any) => {
         <br /> moment is crafted to nurture your unique radiance.
       </div>
       <div>
-        <button className="hero__button" onClick={() => navigate("/product")}>
-          Shop Now
-        </button>
-        <button className="hero__button btn-secondary">Booking</button>
+        <Button
+          name={"Shop Now"}
+          onClick={() => navigate("/product")}
+          buttonType={"primary"}
+        />
+        <span style={{marginLeft: "20px"}}></span>
+        <Button
+          name={"Booking"}
+          onClick={function (): void {
+            throw new Error("Function not implemented.")
+          }}
+          buttonType={"secondary"}
+        />
       </div>
     </div>
   )

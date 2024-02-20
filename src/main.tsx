@@ -3,9 +3,9 @@ import ReactDOM from "react-dom/client"
 import App from "./App"
 import "./index.css"
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
-import Product from "./components/product"
-import ListProduct from "./components/listProduct"
-import Customer from "./components/main/Customer"
+import Product from "./views/product"
+import ListProduct from "./views/listProduct"
+import Customer from "./views/main/Customer"
 
 const router = createBrowserRouter([
   {

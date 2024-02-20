@@ -25,3 +25,8 @@ button {
   text-transform: capitalize;
   cursor: pointer;
 }
+
+.btn-secondary{
+  background-color: #fff;
+  color: black
+}
