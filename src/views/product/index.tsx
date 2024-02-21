@@ -1,5 +1,7 @@
 import "./style.css"
 const Product = () => {
+  
+  //have to make cards as a component.
   return (
     <div className="product">
       <div className="product__card">

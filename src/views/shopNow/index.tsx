@@ -1,3 +1,4 @@
+import Button from "../../components/common/Button"
 import "./style.css"
 import { useNavigate } from "react-router-dom"
 
@@ -20,12 +21,13 @@ const ShopNow = () => {
             your beauty game! Discover your perfect look today by exploring our
             collection and finding the ideal match for your style
           </div>
-          <button
-            className="shopNow__description__btn"
-            onClick={() => navigate("/")}
-          >
-            Shop Now
-          </button>
+          <div>
+            <Button
+              name="Shop Now"
+              onClick={() => navigate("/product")}
+              buttonType={"primary"}
+            />
+          </div>
         </div>
       </div>
 
@@ -43,12 +45,13 @@ const ShopNow = () => {
             Get your perfect manicure! Treat your nails to some love and care
             with our exclusive collection. Shop now and pamper yourself!
           </div>
-          <button
-            className="shopNow__description__btn"
-            onClick={() => navigate("/")}
-          >
-            Shop Now
-          </button>
+          <div>
+            <Button
+              name="Shop Now"
+              onClick={() => navigate("/product")}
+              buttonType={"primary"}
+            />
+          </div>
         </div>
       </div>
     </div>

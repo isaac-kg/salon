@@ -34,9 +34,6 @@
   order: 1;
 }
 
-.shopNow__description__btn {
-  margin: auto;
-}
 
 @media only screen and (min-width: 768px){
   .shopNow-container{

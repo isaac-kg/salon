@@ -13,13 +13,17 @@ const Booking = () => {
           artisans, and let our personalized services unveil your true beauty
           potential.
         </div>
+        <div>
+
         <Button
           name={"Booking"}
+          width=""
           onClick={function (): void {
             throw new Error("Function not implemented.")
           }}
           buttonType={"primary"}
         />
+        </div>
       </div>
     </div>
   )

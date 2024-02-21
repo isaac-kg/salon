@@ -1,7 +1,12 @@
 import React from "react"
 import "./style.css"
+import Button from "../../components/common/Button"
+import { useNavigate } from "react-router-dom"
+
 
 const ListProduct = () => {
+
+  const navigate = useNavigate();
   return (
     <div className="productList">
       <h3>Shopping Cart</h3>
@@ -36,8 +41,18 @@ const ListProduct = () => {
         </tr>
       </table>
       <div className="productList__buttons">
-        <button>Continue Shopping</button>
-        <button>Checkout</button>
+        <Button
+          name="Continue Shopping"
+          onClick={() => navigate("/product")}
+          buttonType={"primary"}
+        />
+        <Button
+          name="Checkout"
+          onClick={function (): void {
+            throw new Error("Function not implemented.")
+          }}
+          buttonType={"primary"}
+        />
       </div>
     </div>
   )
