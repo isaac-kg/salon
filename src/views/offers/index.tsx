@@ -10,6 +10,11 @@ interface OfferProps {
 }
 
 const Offer = ({title, price, description, image}: OfferProps ) => {
+
+  const offers = [
+    {name: "Eyelash", price: 170, description}
+  ];
+
   return (
     <React.Fragment>
       <h3 className="offer-header">Popular Offers</h3>

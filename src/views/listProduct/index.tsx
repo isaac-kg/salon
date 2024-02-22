@@ -18,13 +18,15 @@ const ListProduct = () => {
           <th>Unit Price</th>
           <th>Total</th>
         </thead>
-        <tr>
-          <td>Lorem, ipsum.</td>
-          <td>2 Lorem </td>
-          <td>3 Lorem, ipsum.</td>
-          <td>4 Lorem, ipsum.</td>
-          <td>Lorem, ipsum. 5</td>
-        </tr>
+        <tbody>
+          <tr>
+            <td>Lorem, ipsum.</td>
+            <td>2 Lorem </td>
+            <td>3 Lorem, ipsum.</td>
+            <td>4 Lorem, ipsum.</td>
+            <td>Lorem, ipsum. 5</td>
+          </tr>
+        </tbody>
       </table>
       <table className="productList__tb-checkout">
         <tr>

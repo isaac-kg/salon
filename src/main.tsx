@@ -1,11 +1,11 @@
-import React from "react"
+import React, { lazy, Suspense } from "react"
 import ReactDOM from "react-dom/client"
 import App from "./App"
 import "./index.css"
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
-import Product from "./views/product"
-import ListProduct from "./views/listProduct"
 import Customer from "./views/main/Customer"
+const Product = lazy(() => import("./views/product"))
+const ListProduct = lazy(() => import("./views/listProduct"))
 
 const router = createBrowserRouter([
   {
@@ -14,19 +14,30 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Customer />
+        element: <Customer />,
       },
       {
         path: "product",
-        element: <Product />
-      },{
+        element: (
+          <Suspense>
+            <Product />
+          </Suspense>
+        ),
+      },
+      {
         path: "product-list",
-        element: <ListProduct />
-      }
+        element: (
+          <Suspense>
+            <ListProduct />
+          </Suspense>
+        ),
+      },
     ],
-    errorElement: <h1 style={{textAlign: "center"}} >404 Ops your are on a wrong page</h1>
-  }
-]);
+    errorElement: (
+      <h1 style={{ textAlign: "center" }}>404 Ops your are on a wrong page</h1>
+    ),
+  },
+])
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
