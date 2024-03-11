@@ -41,14 +41,16 @@ const About = () => {
       <div className="about__images">
         <div className="about__images-one">
           <div className="image-one">
-
           <LazyLoadImage
             alt="This is alt"
             src="/assets/makeuplady.jpg"
-            placeholderSrc="/assets/placeholder.jpg"
+            placeholderSrc="/assets/icons/shadow.svg"
             effect="blur"
             width="100%"
             height="300px"
+            style={{
+              objectFit: "cover"
+            }}
             />
           </div>
         </div>
@@ -60,6 +62,9 @@ const About = () => {
             placeholderSrc="/assets/placeholder.jpg"
             width="100%"
             height="300px"
+            style={{
+              objectFit: "cover"
+            }}
           />
         </div>
       </div>
