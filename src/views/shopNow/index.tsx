@@ -1,3 +1,4 @@
+import { LazyLoadImage } from "react-lazy-load-image-component"
 import Button from "../../components/common/Button"
 import "./style.css"
 import { useNavigate } from "react-router-dom"
@@ -8,10 +9,16 @@ const ShopNow = () => {
     <div className="shopNow-container">
       <div className="shopNow">
         <div className="shopNow__image">
-          <img
-            className="shopNow__image-1"
-            src="../../assets/makeup.jpg"
-            alt=""
+          <LazyLoadImage
+            alt="This is alt"
+            src="/assets/makeup.jpg"
+            placeholderSrc="/assets/icons/shadow.svg"
+            effect="blur"
+            width="100%"
+            height="300px"
+            style={{
+              objectFit: "cover",
+            }}
           />
         </div>
         <div className="shopNow__description">
@@ -33,10 +40,16 @@ const ShopNow = () => {
 
       <div className="shopNow">
         <div className="shopNow__image shopNow__image-two">
-          <img
-            className="shopNow__image-1"
-            src="../../assets/nails.jpg"
-            alt=""
+          <LazyLoadImage
+            alt="This is alt"
+            src="/assets/nails.jpg"
+            placeholderSrc="/assets/icons/shadow.svg"
+            effect="blur"
+            width="100%"
+            height="300px"
+            style={{
+              objectFit: "cover",
+            }}
           />
         </div>
         <div className="shopNow__description shopNow__description-two">

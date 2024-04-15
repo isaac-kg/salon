@@ -11,12 +11,6 @@
   max-width: 100%;
 }
 
-.shopNow__image-1 {
-  width: 100%;
-  object-fit: cover;
-  height: 300px;
-}
-
 .shopNow__description {
   display: flex;
   flex-direction: column;
