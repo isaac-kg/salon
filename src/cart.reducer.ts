@@ -8,7 +8,7 @@ export interface CartItem {
 }
 
 const initialState = {
-  cartItems: null,
+  cartItems: [],
   totalItemIncart: 0
 }
 
@@ -17,7 +17,7 @@ export const cartSlice = createSlice({
   initialState,
   reducers: {
     setCartItems: (state, action) => {
-      state.cartItems = action.payload;
+      state.cartItems.push(action.payload)
     },
     setCountItems: (state, action) =>{
       state.cartItems = 3

@@ -2,9 +2,14 @@ import React from "react"
 import "./style.css"
 import Button from "../../components/common/Button"
 import { useNavigate } from "react-router-dom"
+import { useAppSelector } from "../../hooks"
 
 
 const ListProduct = () => {
+
+
+  const { totalItemIncart, cartItems } = useAppSelector((state) => state.cart)
+  console.log("Cart items", cartItems)
 
   const navigate = useNavigate();
   return (
@@ -12,20 +17,19 @@ const ListProduct = () => {
       <h3>Shopping Cart</h3>
       <table className="productList__tb">
         <thead>
-          <th>Image</th>
           <th>Product Name</th>
           <th>Quantity</th>
           <th>Unit Price</th>
           <th>Total</th>
         </thead>
         <tbody>
+          {cartItems.map((cartItem, index) => 
           <tr>
-            <td>Lorem, ipsum.</td>
-            <td>2 Lorem </td>
-            <td>3 Lorem, ipsum.</td>
-            <td>4 Lorem, ipsum.</td>
-            <td>Lorem, ipsum. 5</td>
-          </tr>
+            <td>{cartItem.productName}</td>
+            <td>{cartItem.productName}</td>
+            <td>{cartItem.price}</td>
+            <td>{cartItem.productName}</td>
+          </tr>)}
         </tbody>
       </table>
       <table className="productList__tb-checkout">
