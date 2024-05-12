@@ -1,8 +1,16 @@
 import React from "react"
 import "./style.css"
 import { useNavigate } from "react-router-dom"
+import { useAppSelector } from "../../hooks"
+
+
 
 const Header = (props: any) => {
+
+  const { totalItemIncart, cartItems } = useAppSelector((state) => state.cart)
+  console.log("Cart Items: ", cartItems)
+  console.log("Cart items total : ", totalItemIncart)
+
   const navigate = useNavigate()
   return (
     <div className="header">
@@ -16,6 +24,7 @@ const Header = (props: any) => {
             src="../../assets/icons/cart.svg"
             alt=""
           />
+          *{totalItemIncart}
         </div>
       </div>
     </div>
