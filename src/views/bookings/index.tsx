@@ -1,9 +1,23 @@
+import { FC, useEffect, useRef } from "react"
 import Button from "../../components/common/Button"
 import "./style.css"
 
-const Booking = () => {
+interface BookingProps {
+  canScroll: number
+}
+
+const Booking: FC<BookingProps> = ({ canScroll }) => {
+  const ref = useRef(null)
+
+  useEffect(() => {
+    console.log("Can scroll ", canScroll)
+    if (canScroll > 1) {
+      ref.current?.scrollIntoView({ behavior: "smooth" })
+    }
+  }, [canScroll])
+
   return (
-    <div className="booking">
+    <div ref={ref} className="booking">
       <img src="../../assets/cosmetics.jpg" className="booking__image" />
 
       <div className="booking__card">
@@ -14,15 +28,15 @@ const Booking = () => {
           potential.
         </div>
         <div>
-
-        <Button
-          name={"Booking"}
-          width=""
-          onClick={function (): void {
-            throw new Error("Function not implemented.")
-          }}
-          buttonType={"primary"}
-        />
+          <Button
+            name={"Booking"}
+            width=""
+            onClick={function (): void {
+              throw new Error("Function not implemented.")
+            }}
+            buttonType={"primary"}
+            disabled={true}
+          />
         </div>
       </div>
     </div>

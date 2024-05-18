@@ -1,3 +1,4 @@
+import { useState } from "react"
 import About from "../about"
 import Booking from "../bookings"
 import Contact from "../contact"
@@ -8,9 +9,16 @@ import ShopNow from "../shopNow"
 import Testimonial from "../testimonial"
 
 const Customer = () => {
+
+  const [canScroll, setCanScroll] = useState(0);
+
+  const handleScroll = () => {
+    setCanScroll((previousState) => previousState + 1)
+  }
+
   return (
     <div>
-      <Hero />
+      <Hero handleScroll={handleScroll} />
       <About />
       <Service
         image="../../assets/icons/lips.svg"
@@ -19,7 +27,7 @@ const Customer = () => {
           "I must make sure every thing is connected and is responsive "
         }
       />
-      <ShopNow />
+      <ShopNow/>
       <Offer
         title={"This is title"}
         price={300}
@@ -28,7 +36,7 @@ const Customer = () => {
         }
         image={"imagewill got her"}
       />
-      <Booking />
+      <Booking  canScroll={canScroll} />
       <Testimonial />
       <Contact />
     </div>

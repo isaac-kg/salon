@@ -25,9 +25,7 @@ const Hero = (props: any) => {
         <span style={{marginLeft: "20px"}}></span>
         <Button
           name={"Booking"}
-          onClick={function (): void {
-            throw new Error("Function not implemented.")
-          }}
+          onClick={props.handleScroll}
           buttonType={"secondary"}
         />
       </div>
