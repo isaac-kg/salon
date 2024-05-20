@@ -1,6 +1,7 @@
 import { FC, useEffect, useRef } from "react"
 import Button from "../../components/common/Button"
 import "./style.css"
+import { Link } from "react-router-dom"
 
 interface BookingProps {
   canScroll: number
@@ -27,16 +28,19 @@ const Booking: FC<BookingProps> = ({ canScroll }) => {
           artisans, and let our personalized services unveil your true beauty
           potential.
         </div>
-        <div>
-          <Button
-            name={"Booking"}
-            width=""
-            onClick={function (): void {
-              throw new Error("Function not implemented.")
+        <div >
+          Email:{" "}
+          <Link
+            to="#"
+            onClick={(e) => {
+              window.location.href = "mailto:booking@radianceheaven.com"
+              e.preventDefault()
             }}
-            buttonType={"primary"}
-            disabled={true}
-          />
+            style={{ color: "blue" }}
+          >
+            booking@radianceheaven.com
+          </Link>
+          
         </div>
       </div>
     </div>
