@@ -14,7 +14,11 @@
 }
 
 .offer__container {
+  display: flex;
   padding: var(--padding-sm-wide);
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .offer__catergory {
@@ -38,10 +42,6 @@
 
 @media only screen and (min-width: 768px) {
   .offer__container {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    justify-content: space-between;
     padding: var(--padding-lg-wide);
   }
 

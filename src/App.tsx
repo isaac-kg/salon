@@ -1,10 +1,17 @@
 import Header from "./views/header"
 import Footer from "./views/footer"
-import { Outlet } from "react-router-dom"
+import { Outlet, useLocation } from "react-router-dom"
 import { Provider } from "react-redux"
 import { store } from "./store"
+import { useEffect } from "react"
 
 function App() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  
   return (
     <Provider store={store}>
       <div className="App">
