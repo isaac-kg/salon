@@ -16,7 +16,7 @@ const Header = (props: any) => {
         Radiance Haven
       </div>
       <div className="header__cal-action">
-        <div onClick={() => navigate("product-list")}>
+        <div style={{display: "flex", alignItems: "center", gap: "4px"}} onClick={() => navigate("product-list")}>
           <img
             style={{ width: "40px" }}
             src="../../assets/icons/cart.svg"

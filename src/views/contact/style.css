@@ -19,7 +19,7 @@
   border-bottom: 2px solid black;
   padding: 16px;
   font-size: 14px;
-  width: 340px;
+  width: 100%;
   background-color:  rgb(250, 231, 234);
 }
 
@@ -40,6 +40,10 @@ input:active, input:focus{
 
   .contact__email{
     margin-left: 40px;
+  }
+
+  .contact__email > input{
+    width: 340px;
   }
 }
   

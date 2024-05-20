@@ -1,3 +1,4 @@
+import { useState } from "react"
 import Button from "../../components/common/Button"
 import "./style.css"
 const Testimonial = () => {
@@ -27,34 +28,48 @@ const Testimonial = () => {
       pic: "../../assets/woman4.jpg",
     },
   ]
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+  
   return (
     <div className="testimonial">
       <div className="testimonial__header">What Our Clients Say</div>
       <div className="testimonial__body">
-        <div>
-          "From the moment I walked in, I felt welcomed. The staff's expertise
-          and genuine care for their clients make Radiance Haven stand out."
-        </div>
+        <div>{testimonial[currentIndex]?.message}</div>
         <div className="testimonial__line">------------------------</div>
+        <div>
         <img
           className="testimonial__image"
-          src="../../assets/woman4.jpg"
+          src={testimonial[currentIndex]?.pic}
           alt=""
         />
-        <p className="testimonial__username">Sophia Banks</p>
+
+        </div>
+        <p className="testimonial__username">
+          {" "}
+          {testimonial[currentIndex]?.customerName}
+        </p>
       </div>
       <div className="testimonial__footer">
         <Button
           name="Left"
-          onClick={function (): void {
-            throw new Error("Function not implemented.")
+          onClick={() => {
+            if (currentIndex === 0) {
+              setCurrentIndex(testimonial.length - 1)
+            } else {
+              setCurrentIndex((previousValue) => previousValue - 1)
+            }
           }}
           buttonType={"primary"}
         />
         <Button
           name="Right"
-          onClick={function (): void {
-            throw new Error("Function not implemented.")
+          onClick={() => {
+            if (currentIndex === testimonial.length - 1) {
+              setCurrentIndex(0)
+            } else {
+              setCurrentIndex((previousValue) => previousValue + 1)
+            }
           }}
           buttonType={"primary"}
         />
