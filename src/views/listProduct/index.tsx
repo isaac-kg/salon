@@ -3,37 +3,57 @@ import "./style.css"
 import Button from "../../components/common/Button"
 import { useNavigate } from "react-router-dom"
 import { useAppDispatch, useAppSelector } from "../../hooks"
-import { setCartItems } from "../../cart.reducer"
-
+import { setCartItems, removeItemFromCart } from "../../cart.reducer"
 
 const ListProduct = () => {
-
-
   const { totalItemIncart, cartItems } = useAppSelector((state) => state.cart)
   const dispatch = useAppDispatch()
 
-  const navigate = useNavigate();
- 
+  const navigate = useNavigate()
+
   return (
     <div className="productList">
       <h3>Shopping Cart</h3>
       <table className="productList__tb">
         <thead>
           <th>Product Name</th>
+          <th>Price</th>
           <th>Quantity</th>
-          <th>Unit Price</th>
           <th>Total</th>
         </thead>
         <tbody>
-          {cartItems.map((cartItem, index) => 
-          <tr>
-            <td>{cartItem.productName}</td>
-            <td><span style={{cursor: "pointer"}}> - </span>{cartItem.items}<span style={{cursor: "pointer"}} onClick={() => {
-              console.log("CartItem",cartItem)
-              dispatch(setCartItems({cartItems, item: cartItem}))}}> + </span></td>
-            <td>{cartItem.price}</td>
-            <td>{cartItem.price * cartItem.items}</td>
-          </tr>)}
+          {cartItems.map((cartItem, index) => (
+            <tr>
+              <td>{cartItem.productName}</td>
+              <td>{cartItem.price}</td>
+              <td>
+                <span style={{background: "#fae7ea", borderRadius: "20px"}}>
+                  <span
+                    style={{ cursor: "pointer",borderRadius: "50px", background: "pink", padding: "0px 6px", border: "50%" }}
+                    onClick={() =>
+                      dispatch(
+                        removeItemFromCart({ cartItems, item: cartItem })
+                      )
+                    }
+                  >
+                    {" "}
+                    -{" "}
+                  </span>
+                  <span style={{margin: "0px 8px"}}>{cartItem.items}</span>
+                  <span
+                    style={{ cursor: "pointer",borderRadius: "50px", background: "pink", padding: "0px 6px", border: "50%" }}
+                    onClick={() =>
+                      dispatch(setCartItems({ cartItems, item: cartItem }))
+                    }
+                  >
+                    {" "}
+                    +{" "}
+                  </span>
+                </span>
+              </td>
+              <td>{cartItem.price * cartItem.items}</td>
+            </tr>
+          ))}
         </tbody>
       </table>
       <table className="productList__tb-checkout">
