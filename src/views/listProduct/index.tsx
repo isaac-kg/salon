@@ -2,16 +2,18 @@ import React from "react"
 import "./style.css"
 import Button from "../../components/common/Button"
 import { useNavigate } from "react-router-dom"
-import { useAppSelector } from "../../hooks"
+import { useAppDispatch, useAppSelector } from "../../hooks"
+import { setCartItems } from "../../cart.reducer"
 
 
 const ListProduct = () => {
 
 
   const { totalItemIncart, cartItems } = useAppSelector((state) => state.cart)
-  console.log("Cart items", cartItems)
+  const dispatch = useAppDispatch()
 
   const navigate = useNavigate();
+ 
   return (
     <div className="productList">
       <h3>Shopping Cart</h3>
@@ -26,9 +28,11 @@ const ListProduct = () => {
           {cartItems.map((cartItem, index) => 
           <tr>
             <td>{cartItem.productName}</td>
-            <td>{cartItem.productName}</td>
+            <td><span style={{cursor: "pointer"}}> - </span>{cartItem.items}<span style={{cursor: "pointer"}} onClick={() => {
+              console.log("CartItem",cartItem)
+              dispatch(setCartItems({cartItems, item: cartItem}))}}> + </span></td>
             <td>{cartItem.price}</td>
-            <td>{cartItem.productName}</td>
+            <td>{cartItem.price * cartItem.items}</td>
           </tr>)}
         </tbody>
       </table>

@@ -8,7 +8,8 @@ import { useAppSelector } from "../../hooks"
 const Header = (props: any) => {
 
   const { totalItemIncart, cartItems } = useAppSelector((state) => state.cart)
-  console.log("This is cart items....", cartItems)
+
+  console.log("Cart Items: ", cartItems)
   const navigate = useNavigate()
   return (
     <div className="header">
@@ -22,7 +23,7 @@ const Header = (props: any) => {
             src="../../assets/icons/cart.svg"
             alt=""
           />
-          {cartItems.length}
+          {cartItems.map((item) => item.items).reduce((accumulator, currentValue) => accumulator + currentValue, 0)}
         </div>
       </div>
     </div>

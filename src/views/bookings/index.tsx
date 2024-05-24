@@ -11,7 +11,6 @@ const Booking: FC<BookingProps> = ({ canScroll }) => {
   const ref = useRef(null)
 
   useEffect(() => {
-    console.log("Can scroll ", canScroll)
     if (canScroll > 1) {
       ref.current?.scrollIntoView({ behavior: "smooth" })
     }

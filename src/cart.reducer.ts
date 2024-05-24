@@ -12,12 +12,27 @@ const initialState = {
   totalItemIncart: 0
 }
 
+
+const getIDs = (products: any) => {
+  const productIds = products.map(product => product._id);
+  return [...new Set(productIds)];
+};
+
+const addProduct = (products: any, newProduct:any) => {
+  
+  if (getIDs(products).includes(newProduct?._id)) {
+    return products.map((product:any) => product._id === newProduct._id ? {...product, items: product.items + 1} : product)
+  } else {
+    return [...products, {...newProduct, items: 1}]
+  }
+};
+
 export const cartSlice = createSlice({
   name: "cart",
   initialState,
   reducers: {
     setCartItems: (state, action) => {
-      state.cartItems.push(action.payload)
+      state.cartItems = addProduct(action.payload.cartItems, action.payload.item);
     },
     setCountItems: (state, action) =>{
       state.cartItems = 3
