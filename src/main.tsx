@@ -4,8 +4,6 @@ import App from "./App"
 import "./index.css"
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
 import Customer from "./views/main/Customer"
-import { Provider } from "react-redux"
-import { store } from "./store"
 const Product = lazy(() => import("./views/product"))
 const ListProduct = lazy(() => import("./views/listProduct"))
 

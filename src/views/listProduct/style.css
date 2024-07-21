@@ -1,5 +1,6 @@
 .productList {
   padding: var(--padding-sm);
+  min-height: 52vh
 }
 
 .productList__buttons {

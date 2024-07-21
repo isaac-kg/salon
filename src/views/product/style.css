@@ -2,6 +2,7 @@
   display: grid;
   gap: 20px;
   padding: var(--padding-sm);
+  min-height: 52vh;
 }
 
 .product__card {
