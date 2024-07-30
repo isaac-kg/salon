@@ -8,6 +8,7 @@
   --padding-lg-wide: 80px 20px;
   -webkit-transform: translate3d(0,0,0);
 }
+
 body {
   font-family: 'PT Serif', serif;
   padding: 0;
@@ -29,4 +30,19 @@ button {
 .btn-secondary{
   background-color: #fff;
   color: black
+}
+
+.skeleton__loader {
+  background-color: #e2e5e7;
+  background-image: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
+  background-size: 50px 100%;
+  background-repeat: no-repeat;
+  background-position: left -50px top 0;
+  animation: loading_skeleton 3s ease infinite;
+}
+
+@keyframes loading_skeleton {
+  to {
+    background-position: right -50px top 0;
+  }
 }

@@ -2,6 +2,7 @@ import { setCartItems } from "../../cart.reducer"
 import Button from "../../components/common/Button"
 import { useAppDispatch, useAppSelector } from "../../hooks"
 import { CartItem } from "../../types/CartItem"
+import { formatPriceToZAR } from "../../utils/money"
 import "./style.css"
 const Product = () => {
   const dispatch = useAppDispatch()
@@ -10,52 +11,52 @@ const Product = () => {
   const items: CartItem[] = [
     {
       _id: "783912",
-      image: "",
-      productName: "Product 1",
+      image: "../../assets/products/bar_soap.png",
+      productName: "Bar Soap",
       price: 10,
-      decription: ""
+      decription: "",
     },
     {
       _id: "456782",
-      image: "",
-      productName: "Product 2",
+      image: "../../assets/products/hand_lotion.png",
+      productName: "Hand Lotion",
       price: 12,
-      decription: ""
+      decription: "",
     },
     {
       _id: "123456",
-      image: "",
-      productName: "Product w",
+      image: "../../assets/products/lip_sticks.png",
+      productName: "Lip Sticks",
       price: 13,
-      decription: ""
+      decription: "",
     },
     {
       _id: "987654",
-      image: "",
-      productName: "Product 4",
+      image: "../../assets/products/lip_sticks2.png",
+      productName: "Lips sticks",
       price: 12,
-      decription: ""
+      decription: "",
     },
     {
       _id: "132621",
-      image: "",
-      productName: "Product s2",
+      image: "../../assets/products/nail_polish.png",
+      productName: "Nail Polish",
       price: 14,
-      decription: ""
+      decription: "",
     },
     {
       _id: "2423422",
-      image: "",
-      productName: "Product fs2",
+      image: "../../assets/products/nail_polish2.png",
+      productName: "Nail Polish",
       price: 15,
-      decription: ""
+      decription: "",
     },
     {
       _id: "345678",
-      image: "",
-      productName: "Product 2fdsa",
+      image: "../../assets/products/perfume.png",
+      productName: "Perfume",
       price: 4.2,
-      decription: ""
+      decription: "",
     },
   ]
 
@@ -66,17 +67,19 @@ const Product = () => {
       {items.map((item, index) => {
         return (
           <div key={index} className="product__card">
-            <img src="" alt="" />
+            <div style={{display: "flex"}}>
+              <img src={item.image} alt="" className="product__card__image" />
+            </div>
+            <div style={{display: "flex", justifyContent: "space-between"}}>
+            <p style={{fontWeight: 700}}>{item.productName}</p>
             <p>
-              {item.price.toLocaleString("en-ZA", {
-                style: "currency",
-                currency: "ZAR",
-              })}
+              {formatPriceToZAR(item.price)}
             </p>
+            </div>
             <Button
               width="100%"
               onClick={() => {
-                dispatch(setCartItems({cartItems, item}))
+                dispatch(setCartItems({ cartItems, item }))
               }}
               name="Add"
               buttonType={"primary"}

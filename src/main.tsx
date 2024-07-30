@@ -4,6 +4,7 @@ import App from "./App"
 import "./index.css"
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
 import Customer from "./views/main/Customer"
+import SkeletonLoader from "./components/common/SkeletonLoader"
 const Product = lazy(() => import("./views/product"))
 const ListProduct = lazy(() => import("./views/listProduct"))
 
@@ -19,7 +20,13 @@ const router = createBrowserRouter([
       {
         path: "product",
         element: (
-          <Suspense fallback={<p style={{minHeight: "55vh", background: "green"}}>Loading</p>}>
+          <Suspense
+            fallback={
+              <div style={{ padding: 20 }}>
+                <SkeletonLoader width={"100%"} height={"55vh"} />
+              </div>
+            }
+          >
             <Product />
           </Suspense>
         ),
@@ -27,7 +34,13 @@ const router = createBrowserRouter([
       {
         path: "product-list",
         element: (
-          <Suspense fallback={<p style={{minHeight: "55vh", background: "pink"}}>Loading</p>}>
+          <Suspense
+            fallback={
+              <div style={{ padding: 20 }}>
+                <SkeletonLoader width={"100%"} height={"55vh"} />
+              </div>
+            }
+          >
             <ListProduct />
           </Suspense>
         ),
