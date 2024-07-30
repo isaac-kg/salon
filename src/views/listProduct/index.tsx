@@ -4,6 +4,7 @@ import Button from "../../components/common/Button"
 import { useNavigate } from "react-router-dom"
 import { useAppDispatch, useAppSelector } from "../../hooks"
 import { setCartItems, removeItemFromCart } from "../../cart.reducer"
+import { CartItem } from "../../types/CartItem"
 
 const ListProduct = () => {
   const { totalItemIncart, cartItems } = useAppSelector((state) => state.cart)
@@ -22,7 +23,7 @@ const ListProduct = () => {
           <th>Total</th>
         </thead>
         <tbody>
-          {cartItems.map((cartItem, index) => (
+          {cartItems.map((cartItem:CartItem, index) => (
             <tr>
               <td>{cartItem.productName}</td>
               <td>{cartItem.price}</td>

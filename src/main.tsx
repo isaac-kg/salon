@@ -19,7 +19,7 @@ const router = createBrowserRouter([
       {
         path: "product",
         element: (
-          <Suspense>
+          <Suspense fallback={<p style={{minHeight: "55vh", background: "green"}}>Loading</p>}>
             <Product />
           </Suspense>
         ),
@@ -27,7 +27,7 @@ const router = createBrowserRouter([
       {
         path: "product-list",
         element: (
-          <Suspense>
+          <Suspense fallback={<p style={{minHeight: "55vh", background: "pink"}}>Loading</p>}>
             <ListProduct />
           </Suspense>
         ),

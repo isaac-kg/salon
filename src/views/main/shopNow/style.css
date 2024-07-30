@@ -1,9 +1,9 @@
-.shopNow-container{
+.shopNow-container {
   padding: var(--padding-sm);
-  background-color:  rgb(250, 231, 234);
+  background-color: rgb(250, 231, 234);
 }
 
-.shopNow{
+.shopNow {
   margin: 80px auto;
 }
 .shopNow__image {
@@ -20,17 +20,16 @@
   padding: var(--padding-sm);
 }
 
-.shopNow__image-two{
+.shopNow__image-two {
   order: 2;
 }
 
-.shopNow__description-two{
+.shopNow__description-two {
   order: 1;
 }
 
-
-@media only screen and (min-width: 768px){
-  .shopNow-container{
+@media only screen and (min-width: 768px) {
+  .shopNow-container {
     padding: var(--padding-lg);
   }
 
@@ -41,5 +40,7 @@
     gap: 20px;
   }
 
-  .shopNow__description { padding: var(--padding-lg);}
+  .shopNow__description {
+    padding: var(--padding-lg);
+  }
 }

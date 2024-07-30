@@ -1,7 +1,7 @@
 import { useState } from "react"
-import Input from "../../components/common/Input"
+import Input from "../../../components/common/Input"
 import "./style.css"
-import Button from "../../components/common/Button"
+import Button from "../../../components/common/Button"
 const Contact = () => {
   const [contactEmail, setContactEmail] = useState<string>("")
 

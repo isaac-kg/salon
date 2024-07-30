@@ -1,9 +1,13 @@
-import React from "react"
 import "./style.css"
 import { useNavigate } from "react-router-dom"
-import Button from "../../components/common/Button"
+import Button from "../../../components/common/Button"
+import { FC } from "react"
 
-const Hero = (props: any) => {
+interface HeroProps {
+  handleScroll: () => void
+}
+
+const Hero: FC<HeroProps> = ({ handleScroll }) => {
   const navigate = useNavigate()
   return (
     <div className="hero">
@@ -22,10 +26,10 @@ const Hero = (props: any) => {
           onClick={() => navigate("/product")}
           buttonType={"primary"}
         />
-        <span style={{marginLeft: "20px"}}></span>
+        <span style={{ marginLeft: "20px" }}></span>
         <Button
           name={"Booking"}
-          onClick={props.handleScroll}
+          onClick={handleScroll}
           buttonType={"secondary"}
         />
       </div>

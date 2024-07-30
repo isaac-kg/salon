@@ -1,6 +1,7 @@
 import { useState } from "react"
-import Button from "../../components/common/Button"
+import Button from "../../../components/common/Button"
 import "./style.css"
+
 const Testimonial = () => {
   const testimonial = [
     {
@@ -29,8 +30,8 @@ const Testimonial = () => {
     },
   ]
 
-  const [currentIndex, setCurrentIndex] = useState(0);
-  
+  const [currentIndex, setCurrentIndex] = useState(0)
+
   return (
     <div className="testimonial">
       <div className="testimonial__header">What Our Clients Say</div>
@@ -38,12 +39,11 @@ const Testimonial = () => {
         <div>{testimonial[currentIndex]?.message}</div>
         <div className="testimonial__line">------------------------</div>
         <div>
-        <img
-          className="testimonial__image"
-          src={testimonial[currentIndex]?.pic}
-          alt=""
-        />
-
+          <img
+            className="testimonial__image"
+            src={testimonial[currentIndex]?.pic}
+            alt=""
+          />
         </div>
         <p className="testimonial__username">
           {" "}

@@ -1,4 +1,4 @@
-.service-header{
+.service-header {
   text-align: center;
   font-size: 28px;
   font-weight: 300;
@@ -6,7 +6,7 @@
   margin-top: 60px;
 }
 
-.service-para{
+.service-para {
   text-align: center;
   padding: 10px;
 }
@@ -24,7 +24,10 @@
   max-width: 200px;
   overflow: hidden;
 }
-.service__title, .service__info{margin: 6px;}
+.service__title,
+.service__info {
+  margin: 6px;
+}
 
 .service__image {
   width: 100%;
@@ -44,7 +47,7 @@
     justify-content: space-between;
   }
 
-  .service-para{
+  .service-para {
     text-align: center;
     width: 80%;
     margin: auto;

@@ -13,7 +13,7 @@
   text-align: center;
 }
 
-.footer__icons{
+.footer__icons {
   display: flex;
   gap: 20px;
 }

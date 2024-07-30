@@ -1,5 +1,5 @@
 import { FC, useEffect, useRef } from "react"
-import Button from "../../components/common/Button"
+import Button from "../../../components/common/Button"
 import "./style.css"
 import { Link } from "react-router-dom"
 
@@ -12,7 +12,7 @@ const Booking: FC<BookingProps> = ({ canScroll }) => {
 
   useEffect(() => {
     if (canScroll > 1) {
-      ref.current?.scrollIntoView({ behavior: "smooth" })
+      ref?.current?.scrollIntoView({ behavior: "smooth" })
     }
   }, [canScroll])
 
@@ -27,7 +27,7 @@ const Booking: FC<BookingProps> = ({ canScroll }) => {
           artisans, and let our personalized services unveil your true beauty
           potential.
         </div>
-        <div >
+        <div>
           Email:{" "}
           <Link
             to="#"
@@ -39,7 +39,6 @@ const Booking: FC<BookingProps> = ({ canScroll }) => {
           >
             booking@radianceheaven.com
           </Link>
-          
         </div>
       </div>
     </div>

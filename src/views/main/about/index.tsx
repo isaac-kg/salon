@@ -1,8 +1,7 @@
-import React from "react"
 import { LazyLoadImage } from "react-lazy-load-image-component"
 import "react-lazy-load-image-component/src/effects/blur.css"
-
 import "./about.css"
+
 const About = () => {
   return (
     <div className="about">
@@ -41,16 +40,16 @@ const About = () => {
       <div className="about__images">
         <div className="about__images-one">
           <div className="image-one">
-          <LazyLoadImage
-            alt="This is alt"
-            src="/assets/makeuplady.jpg"
-            placeholderSrc="/assets/icons/shadow.svg"
-            effect="blur"
-            width="100%"
-            height="300px"
-            style={{
-              objectFit: "cover"
-            }}
+            <LazyLoadImage
+              alt="This is alt"
+              src="/assets/makeuplady.jpg"
+              placeholderSrc="/assets/icons/shadow.svg"
+              effect="blur"
+              width="100%"
+              height="300px"
+              style={{
+                objectFit: "cover",
+              }}
             />
           </div>
         </div>
@@ -63,7 +62,7 @@ const About = () => {
             width="100%"
             height="300px"
             style={{
-              objectFit: "cover"
+              objectFit: "cover",
             }}
           />
         </div>
