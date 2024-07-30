@@ -12,6 +12,22 @@ const ListProduct = () => {
 
   const navigate = useNavigate()
 
+  
+  const calculateSubTotal = () => {
+    const totalByItem = cartItems.map((cartItems) => cartItems.items * cartItems.price)
+    .reduce(
+      (accumulator, currentValue) =>
+        (accumulator ?? 0) + (currentValue ?? 0),
+      0
+    )
+    console.log("This is total: ", totalByItem)
+    return totalByItem
+  }
+
+  const calculateVATOfPrice = () => {
+    return calculateSubTotal() * 0.15;
+  }
+
   return (
     <div className="productList">
       <h3>Shopping Cart</h3>
@@ -60,15 +76,15 @@ const ListProduct = () => {
       <table className="productList__tb-checkout">
         <tr>
           <th>Sub Total</th>
-          <td>R 100.00</td>
+          <td>{calculateSubTotal()}</td>
         </tr>
         <tr>
           <th>VAT (15%)</th>
-          <td>R 15.00</td>
+          <td>{calculateVATOfPrice()}</td>
         </tr>
         <tr>
           <th>Total</th>
-          <td>R 115.00</td>
+          <td>{calculateVATOfPrice() + calculateSubTotal()}</td>
         </tr>
       </table>
       <div className="productList__buttons">
