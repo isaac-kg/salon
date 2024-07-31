@@ -1,3 +1,10 @@
-.sign-up{
-    color: "green"
+.sign-up {
+  padding: var(--padding-sm);
+  min-height: 52vh;
+}
+
+@media only screen and (min-width: 768px) {
+  .sign-up {
+    padding: var(--padding-lg);
+  }
 }

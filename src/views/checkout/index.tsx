@@ -1,6 +1,7 @@
+import "./style.css"
 const Checkout = () => {
   return (
-    <div>
+    <div className="checkout">
       <h1>This is checkout page...</h1>
     </div>
   )

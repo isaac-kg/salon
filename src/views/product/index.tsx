@@ -1,5 +1,5 @@
 import { setCartItems } from "../../cart.reducer"
-import Button from "../../components/common/Button"
+import Button from "../../components/common/button/Button"
 import { useAppDispatch, useAppSelector } from "../../hooks"
 import { CartItem } from "../../types/CartItem"
 import { formatPriceToZAR } from "../../utils/money"

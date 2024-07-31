@@ -1,5 +1,5 @@
 import { LazyLoadImage } from "react-lazy-load-image-component"
-import Button from "../../../components/common/Button"
+import Button from "../../../components/common/button/Button"
 import "./style.css"
 import { useNavigate } from "react-router-dom"
 

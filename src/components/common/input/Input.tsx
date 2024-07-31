@@ -1,10 +1,11 @@
 import { FC } from "react"
+import "./style.css"
 
 interface InputProps {
-  type: string;
-  label: string;
-  name: string;
-  value: string;
+  type: string
+  label: string
+  name: string
+  value: string
   onChange: (e: any) => void
 }
 

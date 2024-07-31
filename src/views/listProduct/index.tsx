@@ -1,6 +1,6 @@
 import React from "react"
 import "./style.css"
-import Button from "../../components/common/Button"
+import Button from "../../components/common/button/Button"
 import { useNavigate } from "react-router-dom"
 import { useAppDispatch, useAppSelector } from "../../hooks"
 import { setCartItems, removeItemFromCart } from "../../cart.reducer"

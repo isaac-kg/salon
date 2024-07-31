@@ -1,6 +1,8 @@
 import "./style.css"
 const SignUp = () => {
-  return <div className="sign-up">This is sign up</div>
+  return <div className="sign-up">
+    
+  </div>
 }
 
 export default SignUp

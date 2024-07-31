@@ -4,7 +4,7 @@ import App from "./App"
 import "./index.css"
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
 import Customer from "./views/main/Customer"
-import SkeletonLoader from "./components/common/SkeletonLoader"
+import SkeletonLoader from "./components/common/skeleton/SkeletonLoader"
 import Checkout from "./views/checkout"
 const ListProduct = lazy(() => import("./views/listProduct"))
 const Product = lazy(() => import("./views/product"))

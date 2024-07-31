@@ -1,4 +1,10 @@
 .sign-in {
-  background-color: black;
-  color: #fff;
+  padding: var(--padding-sm);
+  min-height: 52vh;
+}
+
+@media only screen and (min-width: 768px) {
+  .sign-in {
+    padding: var(--padding-lg);
+  }
 }
