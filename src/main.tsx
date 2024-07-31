@@ -5,8 +5,11 @@ import "./index.css"
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
 import Customer from "./views/main/Customer"
 import SkeletonLoader from "./components/common/SkeletonLoader"
-const Product = lazy(() => import("./views/product"))
+import Checkout from "./views/checkout"
 const ListProduct = lazy(() => import("./views/listProduct"))
+const Product = lazy(() => import("./views/product"))
+const SignIn = lazy(() => import("./views/signIn"))
+const SignUp = lazy(() => import("./views/signUp"))
 
 const router = createBrowserRouter([
   {
@@ -42,6 +45,48 @@ const router = createBrowserRouter([
             }
           >
             <ListProduct />
+          </Suspense>
+        ),
+      },
+      {
+        path: "sign-up",
+        element: (
+          <Suspense
+            fallback={
+              <div style={{ padding: 20 }}>
+                <SkeletonLoader width={"100%"} height={"55vh"} />
+              </div>
+            }
+          >
+            <SignUp />
+          </Suspense>
+        ),
+      },
+      {
+        path: "sign-in",
+        element: (
+          <Suspense
+            fallback={
+              <div style={{ padding: 20 }}>
+                <SkeletonLoader width={"100%"} height={"55vh"} />
+              </div>
+            }
+          >
+            <SignIn />
+          </Suspense>
+        ),
+      },
+      {
+        path: "checkout",
+        element: (
+          <Suspense
+            fallback={
+              <div style={{ padding: 20 }}>
+                <SkeletonLoader width={"100%"} height={"55vh"} />
+              </div>
+            }
+          >
+            <Checkout />
           </Suspense>
         ),
       },

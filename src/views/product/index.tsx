@@ -7,7 +7,6 @@ import "./style.css"
 const Product = () => {
   const dispatch = useAppDispatch()
 
-  //have to make cards as a component.
   const items: CartItem[] = [
     {
       _id: "783912",

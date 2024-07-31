@@ -43,7 +43,7 @@ const ListProduct = () => {
               {cartItems.map((cartItem: CartItem, index) => (
                 <tr>
                   <td>{cartItem.productName}</td>
-                  <td>{cartItem.price}</td>
+                  <td>{formatPriceToZAR(cartItem.price)}</td>
                   <td>
                     <span
                       style={{ background: "#fae7ea", borderRadius: "20px" }}
@@ -85,7 +85,7 @@ const ListProduct = () => {
                       </span>
                     </span>
                   </td>
-                  <td>{cartItem.price * cartItem.items}</td>
+                  <td>{formatPriceToZAR(cartItem.price * cartItem.items)}</td>
                 </tr>
               ))}
             </tbody>

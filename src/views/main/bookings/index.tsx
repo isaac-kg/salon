@@ -1,7 +1,7 @@
 import { FC, useEffect, useRef } from "react"
-import Button from "../../../components/common/Button"
 import "./style.css"
 import { Link } from "react-router-dom"
+import { LazyLoadImage } from "react-lazy-load-image-component"
 
 interface BookingProps {
   canScroll: number
@@ -18,7 +18,19 @@ const Booking: FC<BookingProps> = ({ canScroll }) => {
 
   return (
     <div ref={ref} className="booking">
-      <img src="../../assets/cosmetics.jpg" className="booking__image" />
+      <div className="booking__image">
+        <LazyLoadImage
+          alt="This is alt"
+          src="../../assets/cosmetics.jpg"
+          placeholderSrc="../../assets/icons/shadow.svg"
+          effect="blur"
+          width="100%"
+          height="450px"
+          style={{
+            objectFit: "cover",
+          }}
+        />
+      </div>
 
       <div className="booking__card">
         <div className="booking__title">BOOK TIME TO GET MANICURE</div>
