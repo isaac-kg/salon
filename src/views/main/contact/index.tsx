@@ -13,8 +13,7 @@ const Contact = () => {
       </div>
       <div className="contact__email">
         <Input
-          type="text"
-          label="Enter your email"
+          placeholder="Enter your email"
           name="conactEmail"
           value={contactEmail}
           onChange={(e) => setContactEmail(e.target.value)}

@@ -1,6 +1,37 @@
+.sign-in__container {
+  min-height: 52vh;
+  display: flex;
+  max-width: 400px;
+}
 .sign-in {
   padding: var(--padding-sm);
-  min-height: 52vh;
+  margin: auto;
+  width: 100%;
+}
+
+.sign-in__row {
+  margin-bottom: 20px;
+}
+
+.sign-in__row-button {
+  margin-top: 40px;
+}
+
+.sign-in__label {
+  margin-bottom: 8px;
+  display: block;
+  font-size: 18px;
+}
+
+.sign-in__links{
+  display: flex;
+  justify-content: space-between;
+  color: #fff
+}
+
+.sign-in__links > a {
+  color: #000;
+  text-underline-position: under;
 }
 
 @media only screen and (min-width: 768px) {

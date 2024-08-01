@@ -1,10 +1,10 @@
 button {
   border: none;
   background-color: black;
-  padding: 12px 20px;
+  padding: 8px 18px;
   color: white;
   font-family: "PT Serif", serif;
-  font-size: 18px;
+  font-size: 16px;
   text-transform: capitalize;
   cursor: pointer;
   border-radius: 7px;

@@ -1,10 +1,9 @@
-input{
-    padding: 12px;
-    font-size: 18px;
-    width: 100%;
-    background-color:  rgb(250, 231, 234);
-    border: none;
-    outline: solid 1px black;
-    box-sizing: border-box;
-    border-radius: 7px;
+input {
+  padding: 8px;
+  font-size: 16px;
+  width: 100%;
+  border: none;
+  outline: solid 1px black;
+  box-sizing: border-box;
+  border-radius: 7px;
 }

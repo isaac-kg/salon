@@ -1,8 +1,22 @@
 .sign-up {
   padding: var(--padding-sm);
   min-height: 52vh;
+  max-width: 400px;
 }
 
+.sign-up__row {
+  margin-bottom: 20px;
+}
+
+.sign-up__row-button {
+  margin-top: 40px;
+}
+
+.sign-up__label {
+  margin-bottom: 8px;
+  display: block;
+  font-size: 18px;
+}
 @media only screen and (min-width: 768px) {
   .sign-up {
     padding: var(--padding-lg);
