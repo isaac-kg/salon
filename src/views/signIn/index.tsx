@@ -6,8 +6,8 @@ import { Form, Formik, FormikHelpers } from "formik"
 import * as Yup from "yup"
 import FormErrorMessage from "../../components/common/formError"
 
-interface loginFormValues {
-  emailAddress: string
+interface SignInFormValues {
+  emailAddress: string;
   password: string
 }
 
@@ -20,8 +20,8 @@ const SignIn = () => {
   })
 
   const submitting = (
-    values: loginFormValues,
-    action: FormikHelpers<loginFormValues>
+    values: SignInFormValues,
+    action: FormikHelpers<SignInFormValues>
   ) => {
     setTimeout(() => {
       console.log("This is the values:: ", values)

@@ -1,11 +1,7 @@
 .sign-up {
   padding: var(--padding-sm);
   min-height: 52vh;
-  max-width: 400px;
-}
-
-.sign-up__row {
-  margin-bottom: 20px;
+  max-width: 500px;
 }
 
 .sign-up__row-button {
@@ -16,9 +12,30 @@
   margin-bottom: 8px;
   display: block;
   font-size: 18px;
+  margin-top: 20px;
 }
+
+.sign-up__link {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.sign-up__link > a {
+  color: #000;
+  text-underline-position: under;
+}
+
 @media only screen and (min-width: 768px) {
   .sign-up {
     padding: var(--padding-lg);
+  }
+
+  .sign-up__row {
+    display: flex;
+    gap: 20px;
+  }
+
+  .sign-up__row > div {
+    flex: 1;
   }
 }
