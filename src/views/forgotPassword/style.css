@@ -1,0 +1,11 @@
+.forgot-password {
+    padding: var(--padding-sm);
+    min-height: 52vh;
+  }
+  
+  @media only screen and (min-width: 768px) {
+    .forgot-password {
+      padding: var(--padding-lg);
+    }
+  }
+  

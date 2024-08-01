@@ -2,7 +2,7 @@ import "./style.css"
 const Checkout = () => {
   return (
     <div className="checkout">
-      <h1>This is checkout page...</h1>
+      <h3>Checkout comming soon</h3>
     </div>
   )
 }

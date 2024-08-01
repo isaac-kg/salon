@@ -52,7 +52,7 @@ const Testimonial = () => {
       </div>
       <div className="testimonial__footer">
         <Button
-          name="Left"
+          name="Previous"
           onClick={() => {
             if (currentIndex === 0) {
               setCurrentIndex(testimonial.length - 1)
@@ -60,10 +60,11 @@ const Testimonial = () => {
               setCurrentIndex((previousValue) => previousValue - 1)
             }
           }}
+          width="98px"
           buttonType={"primary"}
         />
         <Button
-          name="Right"
+          name="Next"
           onClick={() => {
             if (currentIndex === testimonial.length - 1) {
               setCurrentIndex(0)
@@ -71,6 +72,7 @@ const Testimonial = () => {
               setCurrentIndex((previousValue) => previousValue + 1)
             }
           }}
+          width="98px"
           buttonType={"primary"}
         />
       </div>

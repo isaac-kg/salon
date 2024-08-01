@@ -15,7 +15,7 @@ You can access live project [here](https://salon-a19c4.web.app/)
 git clone (https://github.com/isaac-kg/salon.git)
 ```
 ```
-cd SALON
+cd salon
 ```
 
 ##### Install dependencies:

@@ -26,7 +26,7 @@ const ListProduct = () => {
   const calculateVATOfPrice = () => {
     return calculateSubTotal() * 0.15
   }
-
+  
   return (
     <div className="productList">
       <h3>Shopping Cart</h3>
@@ -117,9 +117,7 @@ const ListProduct = () => {
         {cartItems && cartItems.length > 0 && (
           <Button
             name="Checkout"
-            onClick={function (): void {
-              throw new Error("Function not implemented.")
-            }}
+            onClick={() => navigate("/checkout")}
             buttonType={"primary"}
           />
         )}
