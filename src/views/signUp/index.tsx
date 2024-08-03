@@ -5,6 +5,9 @@ import "./style.css"
 import { Form, Formik, FormikHelpers } from "formik"
 import FormErrorMessage from "../../components/common/formError"
 import signUpValidationSchema from "./signUpValidation"
+import { doc, setDoc } from "firebase/firestore"
+import { auth, db } from "../../firebase-config"
+import { createUserWithEmailAndPassword } from "firebase/auth"
 
 interface SignUpFormValues {
   firstname: string
@@ -16,15 +19,32 @@ interface SignUpFormValues {
 }
 
 const SignUp = () => {
-
   const submitting = (
     values: SignUpFormValues,
     action: FormikHelpers<SignUpFormValues>
   ) => {
-    setTimeout(() => {
-      console.log("This is the values:: ", values)
-      action.setSubmitting(false)
-    }, 4000)
+    createUserWithEmailAndPassword(auth, values.emailAddress, values.password)
+      .then(async (response) => {
+        const userid = response.user.uid
+
+        try {
+          await setDoc(doc(db, "users", userid), {
+            firstname: values.firstname,
+            lastname: values.lastname,
+            emailAddress: values.emailAddress,
+            phoneNumber: values.phoneNumber,
+          })
+          console.log("User has been aded to users collection....")
+        } catch (e) {
+          console.error("Error adding document: ", e)
+        }
+      })
+      .catch((error) => {
+        console.log("This is error", error)
+      })
+      .finally(() => {
+        action.setSubmitting(false)
+      })
   }
 
   return (

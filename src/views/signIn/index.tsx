@@ -5,9 +5,13 @@ import "./style.css"
 import { Form, Formik, FormikHelpers } from "formik"
 import * as Yup from "yup"
 import FormErrorMessage from "../../components/common/formError"
+import {auth} from "../../firebase-config"
+import {
+  signInWithEmailAndPassword,
+} from "firebase/auth"
 
 interface SignInFormValues {
-  emailAddress: string;
+  emailAddress: string
   password: string
 }
 
@@ -23,10 +27,16 @@ const SignIn = () => {
     values: SignInFormValues,
     action: FormikHelpers<SignInFormValues>
   ) => {
-    setTimeout(() => {
-      console.log("This is the values:: ", values)
-      action.setSubmitting(false)
-    }, 4000)
+    signInWithEmailAndPassword(auth, values.emailAddress, values.password)
+      .then((userCredentail) => {
+        console.log("This is signed up: ", userCredentail)
+      })
+      .catch((error) => {
+        console.log("This is error", error)
+      })
+      .finally(() => {
+        action.setSubmitting(false)
+      })
   }
 
   return (
@@ -42,11 +52,15 @@ const SignIn = () => {
           onSubmit={(values, action) => {
             submitting(values, action)
           }}
-          >
+        >
           {({ isSubmitting, handleChange, values }) => (
             <Form>
               {/* TODO get an actuall error.*/}
-              { isSubmitting && <div style={{ color: "#D2042D", textAlign: "center" }}><small>*Invalide user information</small></div>}
+              {false && (
+                <div style={{ color: "#D2042D", textAlign: "center" }}>
+                  <small>*Invalide user information</small>
+                </div>
+              )}
               <div className="sign-in__row">
                 <label className="sign-in__label">Email Address</label>
                 <Input
@@ -65,7 +79,7 @@ const SignIn = () => {
                   value={values.password}
                   onChange={handleChange}
                 />
-                 <FormErrorMessage name="password" />
+                <FormErrorMessage name="password" />
               </div>
               <div className="sign-in__row sign-in__row-button">
                 <Button

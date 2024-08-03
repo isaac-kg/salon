@@ -17,6 +17,7 @@ git clone (https://github.com/isaac-kg/salon.git)
 ```
 cd salon
 ```
+make sure you get firebase-config file and put in in the root folder
 
 ##### Install dependencies:
 ```
