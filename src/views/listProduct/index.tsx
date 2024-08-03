@@ -3,7 +3,7 @@ import "./style.css"
 import Button from "../../components/common/button/Button"
 import { useNavigate } from "react-router-dom"
 import { useAppDispatch, useAppSelector } from "../../hooks"
-import { setCartItems, removeItemFromCart } from "../../cart.reducer"
+import { setCartItems, removeItemFromCart } from "../../store/cart.reducer"
 import { CartItem } from "../../types/CartItem"
 import { formatPriceToZAR } from "../../utils/money"
 
@@ -117,7 +117,9 @@ const ListProduct = () => {
         {cartItems && cartItems.length > 0 && (
           <Button
             name="Checkout"
-            onClick={() => navigate("/checkout")}
+            onClick={() => 
+              navigate("/checkout")
+            }
             buttonType={"primary"}
           />
         )}

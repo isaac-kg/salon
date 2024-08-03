@@ -1,4 +1,4 @@
-import { setCartItems } from "../../cart.reducer"
+import { setCartItems } from "../../store/cart.reducer"
 import Button from "../../components/common/button/Button"
 import { useAppDispatch, useAppSelector } from "../../hooks"
 import { CartItem } from "../../types/CartItem"

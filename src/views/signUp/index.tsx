@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import Button from "../../components/common/button/Button"
 import Input from "../../components/common/input/Input"
 import "./style.css"
@@ -19,6 +19,8 @@ interface SignUpFormValues {
 }
 
 const SignUp = () => {
+  const navigate = useNavigate()
+
   const submitting = (
     values: SignUpFormValues,
     action: FormikHelpers<SignUpFormValues>
@@ -34,7 +36,7 @@ const SignUp = () => {
             emailAddress: values.emailAddress,
             phoneNumber: values.phoneNumber,
           })
-          console.log("User has been aded to users collection....")
+          navigate("/product")
         } catch (e) {
           console.error("Error adding document: ", e)
         }
