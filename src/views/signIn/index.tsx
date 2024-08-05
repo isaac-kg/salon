@@ -9,6 +9,8 @@ import {auth} from "../../firebase-config"
 import {
   signInWithEmailAndPassword,
 } from "firebase/auth"
+import { useAppDispatch } from "../../hooks"
+import { addUidAndEmail } from "../../store/user.actions"
 
 interface SignInFormValues {
   emailAddress: string
@@ -16,7 +18,8 @@ interface SignInFormValues {
 }
 
 const SignIn = () => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
+  const dispatch = useAppDispatch();
 
   const signInValidationSchema = Yup.object({
     emailAddress: Yup.string()
@@ -31,7 +34,7 @@ const SignIn = () => {
   ) => {
     signInWithEmailAndPassword(auth, values.emailAddress, values.password)
       .then((userCredentail) => {
-        
+        dispatch(addUidAndEmail({uid: userCredentail.user.uid, email: userCredentail.user.email}))
         navigate("/product")
       })
       .catch((error) => {
@@ -81,6 +84,7 @@ const SignIn = () => {
                   name={"password"}
                   value={values.password}
                   onChange={handleChange}
+                  type="password"
                 />
                 <FormErrorMessage name="password" />
               </div>

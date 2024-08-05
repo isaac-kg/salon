@@ -8,6 +8,8 @@ import signUpValidationSchema from "./signUpValidation"
 import { doc, setDoc } from "firebase/firestore"
 import { auth, db } from "../../firebase-config"
 import { createUserWithEmailAndPassword } from "firebase/auth"
+import { useAppDispatch } from "../../hooks"
+import { addUidAndEmail } from "../../store/user.actions"
 
 interface SignUpFormValues {
   firstname: string
@@ -20,6 +22,7 @@ interface SignUpFormValues {
 
 const SignUp = () => {
   const navigate = useNavigate()
+  const dispatch = useAppDispatch();
 
   const submitting = (
     values: SignUpFormValues,
@@ -36,6 +39,7 @@ const SignUp = () => {
             emailAddress: values.emailAddress,
             phoneNumber: values.phoneNumber,
           })
+          dispatch(addUidAndEmail({uid: response.user.uid, email: response.user.email}))
           navigate("/product")
         } catch (e) {
           console.error("Error adding document: ", e)

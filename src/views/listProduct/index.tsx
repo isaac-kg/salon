@@ -9,6 +9,7 @@ import { formatPriceToZAR } from "../../utils/money"
 
 const ListProduct = () => {
   const { cartItems } = useAppSelector((state) => state.cart)
+  const { uidAndEmail } = useAppSelector((state) => state.user)
   const dispatch = useAppDispatch()
 
   const navigate = useNavigate()
@@ -26,7 +27,7 @@ const ListProduct = () => {
   const calculateVATOfPrice = () => {
     return calculateSubTotal() * 0.15
   }
-  
+
   return (
     <div className="productList">
       <h3>Shopping Cart</h3>
@@ -101,7 +102,9 @@ const ListProduct = () => {
             </tr>
             <tr>
               <th>Total</th>
-              <td>{formatPriceToZAR(calculateVATOfPrice() + calculateSubTotal())}</td>
+              <td>
+                {formatPriceToZAR(calculateVATOfPrice() + calculateSubTotal())}
+              </td>
             </tr>
           </table>
         </React.Fragment>
@@ -117,9 +120,13 @@ const ListProduct = () => {
         {cartItems && cartItems.length > 0 && (
           <Button
             name="Checkout"
-            onClick={() => 
-              navigate("/checkout")
-            }
+            onClick={() => {
+              if (uidAndEmail) {
+                navigate("/checkout")
+              } else {
+                navigate("/checkout")
+              }
+            }}
             buttonType={"primary"}
           />
         )}
