@@ -8,8 +8,8 @@ import SkeletonLoader from "./components/common/skeleton/SkeletonLoader"
 import Checkout from "./views/checkout"
 import ForgotPassword from "./views/forgotPassword"
 import ProtectedRoutes from "./protectedRoutes"
-const ListProduct = lazy(() => import("./views/listProduct"))
-const Product = lazy(() => import("./views/product"))
+const ListProduct = lazy(() => import("./views/listProduct/index"))
+const Product = lazy(() => import("./views/product/index"))
 const SignIn = lazy(() => import("./views/signIn"))
 const SignUp = lazy(() => import("./views/signUp"))
 

@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom"
+import { Link, useLocation, useNavigate } from "react-router-dom"
 import Button from "../../components/common/button/Button"
 import Input from "../../components/common/input/Input"
 import "./style.css"
@@ -19,8 +19,10 @@ interface SignInFormValues {
 
 const SignIn = () => {
   const navigate = useNavigate();
-  const dispatch = useAppDispatch();
+  const location = useLocation();
 
+  const dispatch = useAppDispatch();
+  const from = (location.state as any)?.from?.pathname || "/";
   const signInValidationSchema = Yup.object({
     emailAddress: Yup.string()
       .email("Invalid email address")
@@ -35,7 +37,7 @@ const SignIn = () => {
     signInWithEmailAndPassword(auth, values.emailAddress, values.password)
       .then((userCredentail) => {
         dispatch(addUidAndEmail({uid: userCredentail.user.uid, email: userCredentail.user.email}))
-        navigate("/product")
+        navigate(from, { replace: true });
       })
       .catch((error) => {
         console.log("This is error", error)
