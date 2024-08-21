@@ -80,7 +80,7 @@ const Product = () => {
               onClick={() => {
                 dispatch(setCartItems({ cartItems, item }))
               }}
-              name="Add"
+              name="Add To Cart"
               buttonType={"primary"}
             />
           </div>

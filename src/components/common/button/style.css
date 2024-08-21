@@ -14,3 +14,21 @@ button {
   background-color: #fff;
   color: black;
 }
+
+button:hover{
+  background-color: rgba(21, 21, 21, 0.873);
+}
+
+.btn-secondary:hover {
+  background-color: #ffffffb4;
+}
+
+button:active{
+  background-color: black;
+  transition: 1;
+}
+
+.btn-secondary:active {
+  background-color: #fff;
+}
+
