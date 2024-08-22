@@ -1,9 +1,28 @@
 import "./style.css"
 import { useNavigate } from "react-router-dom"
 import { useAppSelector } from "../../../hooks"
+import { useEffect, useState } from "react"
 
 const Header = () => {
   const { cartItems } = useAppSelector((state) => state.cart)
+
+  const isLoggedIn = true
+  const [showDropdown, setShowDropdown] = useState(false)
+
+  //Get Screen Width
+
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth)
+  const detectSize = () => {
+    setWindowWidth(window.innerWidth)
+  }
+
+  useEffect(() => {
+    window.addEventListener("resize", detectSize);
+
+    return () => {
+      window.removeEventListener("resize", detectSize)
+    }
+  }, [windowWidth])
 
   const navigate = useNavigate()
   return (
@@ -11,24 +30,71 @@ const Header = () => {
       <div className="header__title" onClick={() => navigate("/")}>
         Radiance Haven
       </div>
-      <div className="header__cal-action">
-        <div
-          style={{ display: "flex", alignItems: "center", gap: "4px" }}
-          onClick={() => navigate("product-list")}
-        >
-          <img
-            style={{ width: "40px" }}
-            src="../../assets/icons/cart.svg"
-            alt=""
-          />
-          {cartItems
-            .map((item) => item.items)
-            .reduce(
-              (accumulator, currentValue) =>
-                (accumulator ?? 0) + (currentValue ?? 0),
-              0
-            )}
+      <div>
+        <div className="header__username-mobile">
+          <p>Username .</p>
+          <div
+            style={{ marginBottom: "-10px" }}
+            onClick={() => setShowDropdown((prevValue) => !prevValue)}
+          >
+            <svg
+              width="20px"
+              height="20px"
+              viewBox="0 0 24.00 24.00"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></g>
+              <g id="SVGRepo_iconCarrier">
+                {" "}
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M12.7071 14.7071C12.3166 15.0976 11.6834 15.0976 11.2929 14.7071L6.29289 9.70711C5.90237 9.31658 5.90237 8.68342 6.29289 8.29289C6.68342 7.90237 7.31658 7.90237 7.70711 8.29289L12 12.5858L16.2929 8.29289C16.6834 7.90237 17.3166 7.90237 17.7071 8.29289C18.0976 8.68342 18.0976 9.31658 17.7071 9.70711L12.7071 14.7071Z"
+                  fill="#000000"
+                ></path>{" "}
+              </g>
+            </svg>
+          </div>
         </div>
+        {showDropdown || (windowWidth >= 768) ? (
+          <div className="header__navigation">
+            {isLoggedIn ? (
+              <>
+                {" "}
+                <p className="sign-up">Sign In</p>
+                <p>Sign Up</p>
+              </>
+            ) : (
+              <>
+                <p className="header__username-desktop">Username</p>
+                <p>Sign Out</p>
+              </>
+            )}
+            <div
+              className="header__cart"
+              onClick={() => navigate("product-list")}
+            >
+              <img
+                style={{ width: "20px" }}
+                src="../../assets/icons/cart.svg"
+                alt=""
+              />
+              {cartItems
+                .map((item) => item.items)
+                .reduce(
+                  (accumulator, currentValue) =>
+                    (accumulator ?? 0) + (currentValue ?? 0),
+                  0
+                )}
+            </div>
+          </div>
+        ) : null}
       </div>
     </div>
   )
