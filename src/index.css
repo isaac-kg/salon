@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif&display=swap");
 :root {
   --primary-color: #000;
   --secondary-color: ;
@@ -6,13 +6,22 @@
   --padding-lg: 40px 20px;
   --padding-sm-wide: 40px 10px;
   --padding-lg-wide: 80px 20px;
-  -webkit-transform: translate3d(0,0,0);
+  -webkit-transform: translate3d(0, 0, 0);
 }
 
 body {
-  font-family: 'PT Serif', serif;
+  font-family: "PT Serif", serif;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+  color: #3b3bb7;
+}
+
+a:hover {
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}

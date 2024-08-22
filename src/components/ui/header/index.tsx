@@ -1,23 +1,22 @@
 import "./style.css"
-import { useNavigate } from "react-router-dom"
-import { useAppSelector } from "../../../hooks"
+import { Link, useNavigate } from "react-router-dom"
+import { useAppDispatch, useAppSelector } from "../../../hooks"
 import { useEffect, useState } from "react"
+import { Button } from "@headlessui/react"
+import { addUidAndEmail } from "../../../store/user.actions"
 
 const Header = () => {
   const { cartItems } = useAppSelector((state) => state.cart)
-
-  const isLoggedIn = true
+  const { uidAndEmail } = useAppSelector((state) => state.user)
   const [showDropdown, setShowDropdown] = useState(false)
-
-  //Get Screen Width
-
   const [windowWidth, setWindowWidth] = useState(window.innerWidth)
+
   const detectSize = () => {
     setWindowWidth(window.innerWidth)
   }
 
   useEffect(() => {
-    window.addEventListener("resize", detectSize);
+    window.addEventListener("resize", detectSize)
 
     return () => {
       window.removeEventListener("resize", detectSize)
@@ -25,6 +24,8 @@ const Header = () => {
   }, [windowWidth])
 
   const navigate = useNavigate()
+  const dispatch = useAppDispatch()
+
   return (
     <div className="header">
       <div className="header__title" onClick={() => navigate("/")}>
@@ -62,18 +63,24 @@ const Header = () => {
             </svg>
           </div>
         </div>
-        {showDropdown || (windowWidth >= 768) ? (
+        {showDropdown || windowWidth >= 768 ? (
           <div className="header__navigation">
-            {isLoggedIn ? (
+            {uidAndEmail ? (
               <>
-                {" "}
-                <p className="sign-up">Sign In</p>
-                <p>Sign Up</p>
+                <p className="header__username-desktop">Username</p>
+                <Button onClick={() => dispatch(addUidAndEmail(null))}>
+                  Sign Out
+                </Button>
               </>
             ) : (
               <>
-                <p className="header__username-desktop">Username</p>
-                <p>Sign Out</p>
+                {" "}
+                <p className="header__sign-in">
+                  <Link to={"/sign-in"}>Sign In</Link>
+                </p>
+                <p>
+                  <Link to={"/sign-up"}>Sign Up</Link>
+                </p>
               </>
             )}
             <div

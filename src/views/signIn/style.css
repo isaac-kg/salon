@@ -29,11 +29,6 @@
   color: #fff
 }
 
-.sign-in__links > a {
-  color: #000;
-  text-underline-position: under;
-}
-
 @media only screen and (min-width: 768px) {
   .sign-in {
     padding: var(--padding-lg);
