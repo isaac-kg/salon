@@ -13,6 +13,9 @@ const Header = () => {
 
   const detectSize = () => {
     setWindowWidth(window.innerWidth)
+    if(window.innerWidth >= 768){
+      setShowDropdown(false)
+    }
   }
 
   useEffect(() => {
@@ -33,7 +36,7 @@ const Header = () => {
       </div>
       <div>
         <div className="header__username-mobile">
-          <p>Username .</p>
+          {uidAndEmail ? <p>{uidAndEmail.email}</p> : null}
           <div
             style={{ marginBottom: "-10px" }}
             onClick={() => setShowDropdown((prevValue) => !prevValue)}
@@ -67,8 +70,8 @@ const Header = () => {
           <div className="header__navigation">
             {uidAndEmail ? (
               <>
-                <p className="header__username-desktop">Username</p>
-                <Button onClick={() => dispatch(addUidAndEmail(null))}>
+                <p className="header__username-desktop">{uidAndEmail?.email}</p>
+                <Button style={{margin: showDropdown ? "20px 0" : "0"}} onClick={() => dispatch(addUidAndEmail(null))}>
                   Sign Out
                 </Button>
               </>

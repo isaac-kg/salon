@@ -11,6 +11,7 @@ import {
 } from "firebase/auth"
 import { useAppDispatch } from "../../hooks"
 import { addUidAndEmail } from "../../store/user.actions"
+import { useState } from "react"
 
 interface SignInFormValues {
   emailAddress: string
@@ -20,6 +21,7 @@ interface SignInFormValues {
 const SignIn = () => {
   const navigate = useNavigate();
   const location = useLocation();
+  const [error, setError] = useState<string>("")
 
   const dispatch = useAppDispatch();
   const from = (location.state as any)?.from?.pathname || "/";
@@ -40,7 +42,10 @@ const SignIn = () => {
         navigate(from, { replace: true });
       })
       .catch((error) => {
-        console.log("This is error", error)
+        setError("Internal server error") //TODO might have to look for more error codes
+        if(error.code === "auth/invalid-credential"){
+          setError("Invalid email or password")
+        }
       })
       .finally(() => {
         action.setSubmitting(false)
@@ -63,10 +68,9 @@ const SignIn = () => {
         >
           {({ isSubmitting, handleChange, values }) => (
             <Form>
-              {/* TODO get an actuall error.*/}
-              {false && (
+              {error && (
                 <div style={{ color: "#D2042D", textAlign: "center" }}>
-                  <small>*Invalide user information</small>
+                  <small>*{error}</small>
                 </div>
               )}
               <div className="sign-in__row">

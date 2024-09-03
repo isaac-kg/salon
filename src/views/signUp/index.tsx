@@ -10,6 +10,7 @@ import { auth, db } from "../../firebase-config"
 import { createUserWithEmailAndPassword } from "firebase/auth"
 import { useAppDispatch } from "../../hooks"
 import { addUidAndEmail } from "../../store/user.actions"
+import { useState } from "react"
 
 interface SignUpFormValues {
   firstname: string
@@ -23,6 +24,7 @@ interface SignUpFormValues {
 const SignUp = () => {
   const navigate = useNavigate()
   const dispatch = useAppDispatch();
+  const [error, setError] = useState<string>("")
 
   const submitting = (
     values: SignUpFormValues,
@@ -43,10 +45,14 @@ const SignUp = () => {
           navigate("/product")
         } catch (e) {
           console.error("Error adding document: ", e)
+          setError("Internal server error")
         }
       })
       .catch((error) => {
-        console.log("This is error", error)
+        setError("Internal server error") //TODO might have to look for more error codes
+        if(error.code === "auth/email-already-in-use"){
+          setError("Email is already taken")
+        }
       })
       .finally(() => {
         action.setSubmitting(false)
@@ -73,6 +79,11 @@ const SignUp = () => {
         {({ isSubmitting, handleChange, values }) => (
           <Form>
             <div className="sign-up__row">
+            {error && (
+                <div style={{ color: "#D2042D", textAlign: "center" }}>
+                  <small>*{error}</small>
+                </div>
+              )}
               <div>
                 <label className="sign-up__label">Firstname</label>
                 <Input
