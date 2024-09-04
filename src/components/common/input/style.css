@@ -6,4 +6,5 @@ input {
   outline: solid 1px black;
   box-sizing: border-box;
   border-radius: 7px;
+  font-family: "Merriweather", serif;
 }

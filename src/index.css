@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=PT+Serif&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
 :root {
   --primary-color: #000;
   --secondary-color: ;
@@ -10,15 +10,16 @@
 }
 
 body {
-  font-family: "PT Serif", serif;
+  font-family: "Merriweather", serif;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  line-height: 1.6;
 }
 
 a {
   text-decoration: none;
-  color: #3b3bb7;
+  color: black
 }
 
 a:hover {
