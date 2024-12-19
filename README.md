@@ -12,7 +12,7 @@ You can access live project [here](https://salon-a19c4.web.app/)
 ### Installation 
 ##### clone the repository:
 ```
-git clone (https://github.com/isaac-kg/salon.git)
+git clone https://github.com/isaac-kg/salon.git
 ```
 ```
 cd salon
